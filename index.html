@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linha do Tempo da História Geral</title>
+  <title>Linha do Tempo Detalhada da História Geral</title>
   
   <!-- CSS do TimelineJS -->
   <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
@@ -89,6 +89,16 @@
       width: 100%;
       height: calc(100vh - 65px);
     }
+
+    /* Otimização visual para modo apenas texto */
+    .tl-slide-content-container .tl-slide-media-only {
+      display: none !important;
+    }
+    .tl-slide-content-container .tl-slide-text-only {
+      width: 100% !important;
+      max-width: 850px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -136,26 +146,24 @@
       });
     }
 
-    // Função para calcular o século de um ano específico
+    // Função para calcular o século de um ano
     function calcularSeculo(ano) {
       if (ano > 0) {
         return Math.ceil(ano / 100);
       } else {
-        // Anos antes de Cristo (a.C.)
         return Math.floor(ano / 100);
       }
     }
 
-    // Busca Textual, por Ano e por Data (DD/MM/AAAA)
+    // Busca Textual, por Ano e por Data
     function filtrarEventos() {
       const termo = document.getElementById('search-input').value.toLowerCase().trim();
       if (!dadosOriginais) return;
 
-      // Reseta botões de filtro visualmente ao usar busca manual
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
 
       if (termo === '') {
-        document.querySelector('.filter-btn').classList.add('active'); // Reativa "Todos"
+        document.querySelector('.filter-btn').classList.add('active');
         renderizarTimeline(dadosOriginais);
         return;
       }
