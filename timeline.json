@@ -1,229 +1,167 @@
 {
   "title": {
-    "text": {
-      "headline": "Linha do Tempo Detalhada da História Geral",
-      "text": "Uma compilação aprofundada dos grandes marcos, processos socioeconômicos e viradas geopolíticas da humanidade, da Antiguidade à Era Digital."
-    }
+    "headline": "Linha do Tempo Detalhada da História Geral",
+    "text": "Uma compilação aprofundada dos grandes marcos, processos socioeconômicos e viradas geopolíticas da humanidade, da Antiguidade à Era Digital."
   },
   "events": [
     {
-      "start_date": {
-        "year": "-3500",
-        "month": "01",
-        "day": "01"
-      },
+      "start_date": { "year": "-3500", "month": "01", "day": "01" },
+      "category": "Antiguidade",
       "text": {
         "headline": "Invenção da Escrita Cuneiforme e Revolução Urbana na Mesopotâmia",
-        "text": "Desenvolvida pelos sumérios na região entre os rios Tigre e Eufrates (atual Iraque), a escrita cuneiforme surgiu inicialmente em tábuas de argila para o controle contábil de colheitas, impostos e rebanhos nos templos (Zigurates) de cidades-estado como Uruk e Ur. Esse avanço marcou a transição da Pré-História para a História Antiga, permitindo a centralização estatal, a formulação das primeiras leis escritas (como o Código de Ur-Nammu e, posteriormente, o Código de Hamurábi) e o registro de narrativas épicas, a exemplo da Epopeia de Gilgamesh."
+        "text": "Desenvolvida pelos sumérios na região entre os rios Tigre e Eufrates (atual Iraque), a escrita cuneiforme surgiu inicialmente em tábuas de argila para o controle contábil de colheitas, impostos e rebanhos nos templos (Zigurates) de cidades-estado como Uruk e Ur. Esse avanço marcou a transição da Pré-História para a História Antiga, permitindo a centralização estatal, a formulação das primeiras leis escritas (como o Código de Ur-Nammu e o Código de Hamurábi) e o registro de narrativas épicas, a exemplo da Epopeia de Gilgamesh."
       }
     },
     {
-      "start_date": {
-        "year": "-2560",
-        "month": "01",
-        "day": "01"
-      },
+      "start_date": { "year": "-2560", "month": "01", "day": "01" },
+      "category": "Antiguidade",
       "text": {
         "headline": "Construção da Grande Pirâmide de Gizé e o Apogeu do Antigo Império Egípcio",
-        "text": "Concluída sob o reinado do faraó Khufu (Qeóps) da IV Dinastia, a Grande Pirâmide permaneceu por mais de 3.800 anos como a estrutura mais alta feita pelo homem (146 metros originais). Erguida por uma força de trabalho estimada em dezenas de milhares de camponeses recrutados durante as cheias do Rio Nilo, a obra exigiu cerca de 2,3 milhões de blocos de pedra. O monumento reflete o poder teocrático absoluto do faraó, concebido como a encarnação terrestre de Hórus, e a complexa cosmologia egípcia voltada para a preservação da alma (Ka) e a vida após a morte."
+        "text": "Concluída sob o reinado do faraó Khufu (Qeóps) da IV Dinastia, a Grande Pirâmide permaneceu por mais de 3.800 anos como a estrutura mais alta feita pelo homem (146 metros originais). Erguida por uma força de trabalho estimada em dezenas de milhares de camponeses recrutados durante as cheias do Rio Nilo, a obra exigiu cerca de 2,3 milhões de blocos de pedra. O monumento reflete o poder teocrático absoluto do faraó e a complexa cosmologia egípcia voltada para a preservação da alma (Ka)."
       }
     },
     {
-      "start_date": {
-        "year": "-447",
-        "month": "01",
-        "day": "01"
-      },
+      "start_date": { "year": "-447", "month": "01", "day": "01" },
+      "category": "Antiguidade",
       "text": {
         "headline": "O Século de Ouro de Atenas, a Liga de Delos e o Parthenon",
-        "text": "Sob a liderança política do estratego Péricles e o financiamento dos tributos da Liga de Delos, Atenas atingiu o ápice cultural e institucional da Grécia Clássica. A reconstrução da Acrópole e a edificação do Parthenon (projetado por Ictinos e Calícrates com esculturas de Fídias) simbolizaram a hegemonia ateniense após as Guerras Médicas contra os persas. O período consolidou a experiência da democracia direta — restrita aos cidadãos homens e livres —, além de impulsionar a filosofia de Sócrates e Platão e o teatro trágico de Sófocles e Eurípedes, antecedendo a devastadora Guerra do Peloponeso."
+        "text": "Sob a liderança política do estratego Péricles e o financiamento dos tributos da Liga de Delos, Atenas atingiu o ápice cultural e institucional da Grécia Clássica. A reconstrução da Acrópole e a edificação do Parthenon simbolizaram a hegemonia ateniense após as Guerras Médicas contra os persas. O período consolidou a experiência da democracia direta — restrita aos cidadãos homens e livres —, além de impulsionar a filosofia de Sócrates e Platão e o teatro trágico de Sófocles e Eurípedes."
       }
     },
     {
-      "start_date": {
-        "year": "-44",
-        "month": "03",
-        "day": "15"
-      },
+      "start_date": { "year": "-44", "month": "03", "day": "15" },
+      "category": "Antiguidade",
       "text": {
         "headline": "Assassinato de Júlio César nos Idos de Março e a Crise da República Romana",
-        "text": "Após ser nomeado dictator perpetuo, Júlio César foi apunhalado 23 vezes no Senado por uma conspiração de cerca de 60 senadores liderados por Marcus Junius Brutus e Gaius Cassius Longinus. Os conspiradores alegavam defender as instituições republicanas contra a tirania monárquica. O assassinato provocou o efeito oposto: desencadeou uma nova onda de guerras civis que destruiu a República Romana, resultando na ascensão do Segundo Triunvirato (Marco Antônio, Otávio e Lépido) e na coroação de Otávio como Augusto em 27 a.C., inaugurando o Império Romano."
+        "text": "Após ser nomeado 'dictator perpetuo', Júlio César foi apunhalado 23 vezes no Senado por uma conspiração de cerca de 60 senadores liderados por Marcus Junius Brutus e Gaius Cassius Longinus. Os conspiradores alegavam defender as instituições republicanas contra a tirania monárquica. O assassinato provocou o efeito oposto: desencadeou uma nova onda de guerras civis que destruiu a República Romana, resultando na ascensão do Segundo Triunvirato e na coroação de Otávio Augusto em 27 a.C."
       }
     },
     {
-      "start_date": {
-        "year": "476",
-        "month": "09",
-        "day": "04"
-      },
+      "start_date": { "year": "476", "month": "09", "day": "04" },
+      "category": "Idade Média",
       "text": {
         "headline": "Deposição de Rômulo Augústulo e o Colapso do Império Romano do Ocidente",
-        "text": "O chefe militar germânico Odoacro depôs o jovem imperador Rômulo Augústulo e enviou as insígnias imperiais a Constantinopla, declarando-se rei da Itália. O evento simbolizou o clímax de um longo processo de fragmentação decorrente da crise do sistema escravista, inflação galopante, instabilidade política militar e as grandes migrações de povos germânicos (visigodos, vândalos, ostrogodos e francos). O colapso do Ocidente marca o encerramento convencional da Idade Antiga e a transição para a Idade Média, dando origem à estrutura feudal na Europa Ocidental."
+        "text": "O chefe militar germânico Odoacro depôs o jovem imperador Rômulo Augústulo e enviou as insígnias imperiais a Constantinopla, declarando-se rei da Itália. O evento simbolizou o clímax de um longo processo de fragmentação decorrente da crise do sistema escravista, inflação galopante, instabilidade política militar e as grandes migrações de povos germânicos. O colapso do Ocidente marca a transição para a Idade Média e a formação da estrutura feudal."
       }
     },
     {
-      "start_date": {
-        "year": "537",
-        "month": "12",
-        "day": "27"
-      },
+      "start_date": { "year": "537", "month": "12", "day": "27" },
+      "category": "Idade Média",
       "text": {
         "headline": "Apogeu do Império Bizantino: Hagia Sophia e o Corpus Juris Civilis",
-        "text": "O imperador Justiniano I inaugurou em Constantinopla a monumental Basílica de Hagia Sophia (Santa Sabedoria), projetada pelos arquitetos Isidoro de Mileto e Antêmio de Tralhes, marcando o ápice da arquitetura bizantina com sua cúpula suspensa. Paralelamente, Justiniano encomendou a compilação do Corpus Juris Civilis sob a coordenação do jurista Triboniano. Este código unificou séculos de jurisprudência romana e tornou-se a espinha dorsal de quase todos os sistemas jurídicos modernos e do Direito Civil no Ocidente."
+        "text": "O imperador Justiniano I inaugurou em Constantinopla a monumental Basílica de Hagia Sophia (Santa Sabedoria), marcando o ápice da arquitetura bizantina com sua cúpula suspensa. Paralelamente, Justiniano encomendou a compilação do 'Corpus Juris Civilis' sob a coordenação do jurista Triboniano. Este código unificou séculos de jurisprudência romana e tornou-se a espinha dorsal de quase todos os sistemas jurídicos modernos e do Direito Civil no Ocidente."
       }
     },
     {
-      "start_date": {
-        "year": "800",
-        "month": "12",
-        "day": "25"
-      },
+      "start_date": { "year": "800", "month": "12", "day": "25" },
+      "category": "Idade Média",
       "text": {
         "headline": "Coroação de Carlos Magno e a Restauração Imperial no Ocidente",
-        "text": "Na missa de Natal na Basílica de São Pedro, o Papa Leão III coroou Carlos Magno, rei dos Francos, como Imperator Romanorum. A aliança entre o Reino Franco e o Papado buscou ressuscitar a autoridade imperial no Ocidente contra as ameaças lombardas e bizantinas. O Império Carolíngio promoveu uma reorganização administrativa baseada na distribuição de condados e marcas, além de desencadear o Renascimento Carolíngio, um movimento de preservação de manuscritos clássicos em mosteiros através da escrita minúscula carolina."
+        "text": "Na missa de Natal na Basílica de São Pedro, o Papa Leão III coroou Carlos Magno, rei dos Francos, como 'Imperator Romanorum'. A aliança entre o Reino Franco e o Papado buscou ressuscitar a autoridade imperial no Ocidente contra as ameaças lombardas e bizantinas. O Império Carolíngio promoveu uma reorganização administrativa e o Renascimento Carolíngio, focado na preservação de manuscritos clássicos."
       }
     },
     {
-      "start_date": {
-        "year": "1215",
-        "month": "06",
-        "day": "15"
-      },
+      "start_date": { "year": "1215", "month": "06", "day": "15" },
+      "category": "Idade Média",
       "text": {
         "headline": "A Magna Carta e as Bases do Constitucionalismo Moderno",
-        "text": "Pressionado por uma rebelião de barões feudais no prado de Runnymede, o rei João da Inglaterra (\"João Sem-Terra\") assinou a Magna Carta Libertatum. O documento forçou a monarquia a aceitar limites ao seu poder absoluto, estipulando que o rei não poderia criar novos impostos sem o consentimento do Grande Conselho e garantindo o devido processo legal (antecessor do habeas corpus). Embora criada para proteger os privilégios da nobreza medieval, a Magna Carta tornou-se o marco fundador do constitucionalismo, da divisão de poderes e dos direitos civis modernos."
+        "text": "Pressionado por uma rebelião de barões feudais no prado de Runnymede, o rei João da Inglaterra ('João Sem-Terra') assinou a Magna Carta Libertatum. O documento forçou a monarquia a aceitar limites ao seu poder absoluto, estipulando que o rei não poderia criar novos impostos sem o consentimento do Grande Conselho e garantindo o devido processo legal. Tornou-se o marco fundador do constitucionalismo e dos direitos civis."
       }
     },
     {
-      "start_date": {
-        "year": "1453",
-        "month": "05",
-        "day": "29"
-      },
+      "start_date": { "year": "1453", "month": "05", "day": "29" },
+      "category": "Idade Moderna",
       "text": {
         "headline": "Queda de Constantinopla e o Fim do Império Bizantino",
-        "text": "Após um cerco de 53 dias com o uso sem precedentes de artilharia pesada e grandes canhões desenvolvidos pelo engenheiro Urbano, as tropas do Império Otomano sob o comando do sultão Mehmed II invadiram Constantinopla. O último imperador bizantino, Constantino XI, morreu em combate. A queda da capital bizantina bloqueou as rotas terrestres de comércio europeu rumo à Ásia, forçando potências ibéricas como Portugal e Espanha a buscarem novas rotas marítimas pelo Atlântico, marco decisivo do fim da Idade Média e início da Idade Moderna."
+        "text": "Após um cerco de 53 dias com o uso de artilharia pesada e grandes canhões, as tropas do Império Otomano sob o comando do sultão Mehmed II invadiram Constantinopla. A queda da capital bizantina bloqueou as rotas terrestres de comércio europeu rumo à Ásia, forçando potências ibéricas como Portugal e Espanha a buscarem novas rotas marítimas pelo Atlântico, marcando o início da Idade Moderna."
       }
     },
     {
-      "start_date": {
-        "year": "1455",
-        "month": "02",
-        "day": "23"
-      },
+      "start_date": { "year": "1455", "month": "02", "day": "23" },
+      "category": "Idade Moderna",
       "text": {
         "headline": "A Prensa de Tipos Móveis de Gutenberg e a Revolução da Informação",
-        "text": "Johannes Gutenberg concluiu em Mainz, na Alemanha, a impressão da famosa Bíblia de 42 linhas utilizando sua invenção: uma prensa mecânica alimentada por tipos móveis metálicos fundidos em liga de chumbo, estanho e antimônio, combinada com tinta à base de óleo. Essa inovação substituiu a cópia manual de manuscritos por escribas, barateando drasticamente a produção de livros. A imprensa permitiu a rápida difusão das ideias do Renascimento, das descobertas científicas e, posteriormente, dos panfletos da Reforma Protestante por toda a Europa."
+        "text": "Johannes Gutenberg concluiu em Mainz, na Alemanha, a impressão da famosa Bíblia de 42 linhas utilizando sua invenção: uma prensa mecânica alimentada por tipos móveis metálicos. Essa inovação substituiu a cópia manual por escribas, barateando a produção de livros e permitindo a rápida difusão das ideias do Renascimento, das descobertas científicas e da Reforma Protestante."
       }
     },
     {
-      "start_date": {
-        "year": "1500",
-        "month": "04",
-        "day": "22"
-      },
+      "start_date": { "year": "1500", "month": "04", "day": "22" },
+      "category": "Idade Moderna",
       "text": {
-        "headline": "Expansão Marítima Portuguesa e a Chegada da Esquadra de Cabral ao Brasil",
-        "text": "Uma frota composta por 13 embarcações comandada pelo fidalgo Pedro Álvares Cabral avistou o Monte Pascoal no litoral sul da atual Bahia, tomando posse das terras em nome do rei D. Manuel I de Portugal. O evento inseriu o continente sul-americano na rede global do mercantilismo europeu. As décadas seguintes deram início ao processo de colonização, caracterizado pela exploração do pau-brasil, implantação da monocultura canavieira, escravização das populações indígenas originárias e início do tráfico transatlântico de africanos escravizados."
+        "headline": "Expansão Marítima Portuguesa e a Chegada de Cabral ao Brasil",
+        "text": "Uma frota comandada por Pedro Álvares Cabral avistou o Monte Pascoal no litoral sul da Bahia, tomando posse das terras para a Coroa Portuguesa. O evento inseriu o continente sul-americano na rede global do mercantilismo europeu, dando início ao processo de colonização, exploração do pau-brasil, implantação da lavoura canavieira e do tráfico transatlântico."
       }
     },
     {
-      "start_date": {
-        "year": "1517",
-        "month": "10",
-        "day": "31"
-      },
+      "start_date": { "year": "1517", "month": "10", "day": "31" },
+      "category": "Idade Moderna",
       "text": {
         "headline": "Afixação das 95 Teses de Martinho Lutero e a Reforma Protestante",
-        "text": "O monge augustiniano Martinho Lutero afixou suas 95 Teses na porta da Igreja do Castelo de Wittenberg, tecendo duras críticas à venda de indulgências promovida pela Igreja Católica para financiar a construção da Basílica de São Pedro. Defendendo princípios como a salvação apenas pela fé (sola fide) e a centralidade da Bíblia (sola scriptura), a contestação de Lutero levou à sua excomunhão e desencadeou a Reforma Protestante, dividindo a cristandade ocidental e gerando profundas transformações políticas, sociais e guerras religiosas na Europa."
+        "text": "O monge augustiniano Martinho Lutero afixou suas 95 Teses na porta da Igreja do Castelo de Wittenberg, criticando a venda de indulgências pela Igreja Católica. Defendendo a salvação apenas pela fé ('sola fide') e a centralidade da Bíblia ('sola scriptura'), o ato desencadeou a Reforma Protestante e dividiu a cristandade ocidental."
       }
     },
     {
-      "start_date": {
-        "year": "1789",
-        "month": "07",
-        "day": "14"
-      },
+      "start_date": { "year": "1789", "month": "07", "day": "14" },
+      "category": "Idade Contemporânea",
       "text": {
         "headline": "Tomada da Bastilha e o Eclodir da Revolução Francesa",
-        "text": "Populares parisiense invadiram e destruíram a fortaleza medieval da Bastilha, um símbolo do absolutismo monárquico de Luís XVI e depósito de munição da cidade. O ato precipitou o colapso do Antigo Regime francês, impulsionado pela crise financeira, a fome e as ideias do Iluminismo. A Revolução levou à aprovação da Declaração dos Direitos do Homem e do Cidadão, à abolição dos privilégios feudais, à execução da família real na guilhotina e à difusão universal dos conceitos políticos modernos de direita, esquerda, cidadania e direitos humanos."
+        "text": "Populares parisienses invadiram e destruíram a fortaleza da Bastilha, símbolo do absolutismo de Luís XVI. O ato precipitou o colapso do Antigo Regime francês, impulsionado pelas ideias do Iluminismo. A Revolução aprovou a Declaração dos Direitos do Homem e do Cidadão, aboliu privilégios feudais e difundiu os conceitos políticos de cidadania e direitos humanos."
       }
     },
     {
-      "start_date": {
-        "year": "1804",
-        "month": "02",
-        "day": "21"
-      },
+      "start_date": { "year": "1804", "month": "02", "day": "21" },
+      "category": "Idade Contemporânea",
       "text": {
-        "headline": "Primeira Viagem de uma Locomotiva a Vapor e a Primeira Revolução Industrial",
-        "text": "O engenheiro britânico Richard Trevithick testou com sucesso a primeira locomotiva a vapor do mundo sobre trilhos na fundição de Penydarren, no País de Gales. A combinação da máquina a vapor de James Watt com a metalurgia do ferro e a abundância de carvão mineral transformou radicalmente a produção manufatureira e os transportes. A Revolução Industrial provocou o êxodo rural massivo, o crescimento das metrópoles, o surgimento da classe trabalhadora urbana (proletariado) e a consolidação do sistema capitalista global."
+        "headline": "Primeira Viagem de uma Locomotiva a Vapor e a Revolução Industrial",
+        "text": "O engenheiro Richard Trevithick testou com sucesso a primeira locomotiva a vapor sobre trilhos no País de Gales. A combinação da máquina a vapor com a metalurgia do ferro e o carvão mineral transformou os transportes e a indústria, provocando o crescimento urbano acelerado e a consolidação do sistema capitalista global."
       }
     },
     {
-      "start_date": {
-        "year": "1822",
-        "month": "09",
-        "day": "07"
-      },
+      "start_date": { "year": "1822", "month": "09", "day": "07" },
+      "category": "Idade Contemporânea",
       "text": {
         "headline": "Proclamação da Independência do Brasil e Ruptura com Portugal",
-        "text": "Às margens do Riacho Ipiranga, em São Paulo, o Príncipe Regente D. Pedro proferiu o chamado \"Grito do Ipiranga\", declarando a separação política do Brasil em relação ao Reino de Portugal. A decisão resultou da resistência da elite colonial às tentativas das Cortes de Lisboa de recolonizar o território brasileiro após o retorno de D. João VI. Diferente das repúblicas hispano-americanas, o Brasil manteve a forma monárquica de governo, a unidade territorial e a estrutura socioeconômica baseada no latifúndio e no trabalho escravo."
+        "text": "Às margens do Riacho Ipiranga, D. Pedro declarou a separação política do Brasil em relação a Portugal, reagindo às tentativas das Cortes de Lisboa de recolonizar o território. O Brasil manteve a forma monárquica de governo, a unidade territorial e a estrutura socioeconômica baseada no latifúndio e na escravidão."
       }
     },
     {
-      "start_date": {
-        "year": "1914",
-        "month": "06",
-        "day": "28"
-      },
+      "start_date": { "year": "1914", "month": "06", "day": "28" },
+      "category": "Idade Contemporânea",
       "text": {
         "headline": "O Atentado de Sarajevo e o Estopim da Primeira Guerra Mundial",
-        "text": "O arquiduque Francisco Fernando, herdeiro do trono Austro-Húngaro, e sua esposa Sofia foram assassinados em Sarajevo por Gavrilo Princip, um nacionalista sérvio membro do grupo Mão Negra. A Crise de Julho que se seguiu ativou a complexa rede de alianças militares da Europa (Tríplice Entente contra Tríplice Aliança), resultando no início da Primeira Guerra Mundial. O conflito brutal de trincheiras durou quatro anos, utilizou pela primeira vez armas químicas e tanques, e culminou no colapso de quatro grandes impérios (Alemão, Austro-Húngaro, Otomano e Russo)."
+        "text": "O arquiduque Francisco Fernando foi assassinado em Sarajevo por um nacionalista sérvio. A Crise de Julho ativou o sistema de alianças militares da Europa, desencadeando a Primeira Guerra Mundial. O conflito durou quatro anos, utilizou novas tecnologias militares e provocou o colapso de quatro grandes impérios."
       }
     },
     {
-      "start_date": {
-        "year": "1945",
-        "month": "09",
-        "day": "02"
-      },
+      "start_date": { "year": "1945", "month": "09", "day": "02" },
+      "category": "Idade Contemporânea",
       "text": {
         "headline": "Rendição do Japão, Fim da Segunda Guerra Mundial e Fundação da ONU",
-        "text": "A bordo do couraçado americano USS Missouri, o Japão assinou formalmente a sua rendição incondicional, encerrando a Segunda Guerra Mundial poucas semanas após os bombardeios atômicos de Hiroshima e Nagasaki. O conflito, o mais destrutivo da história com mais de 70 milhões de mortos e o horror do Holocausto, redesenhou o mapa político mundial. O cenário pós-guerra deu origem à Organização das Nações Unidas (ONU) para mediar conflitos internacionais e marcou o início da Guerra Fria entre as superpotências Estados Unidos e União Soviética."
+        "text": "O Japão assinou a rendição incondicional, encerrando a Segunda Guerra Mundial após os bombardeios atômicos de Hiroshima e Nagasaki. O conflito deixou mais de 70 milhões de mortos e resultou na criação da Organização das Nações Unidas (ONU) e no início da Guerra Fria entre EUA e URSS."
       }
     },
     {
-      "start_date": {
-        "year": "1969",
-        "month": "07",
-        "day": "20"
-      },
+      "start_date": { "year": "1969", "month": "07", "day": "20" },
+      "category": "Era Digital",
       "text": {
-        "headline": "A Módulo Lunar Apollo 11 Pousa na Lua e a Corrida Espacial",
-        "text": "Como parte da missão Apollo 11 da NASA, o astronauta Neil Armstrong tornou-se o primeiro ser humano a pisar na superfície da Lua, proferindo a célebre frase: \"Um pequeno passo para o homem, um salto gigantesco para a humanidade\". Acompanhado por Buzz Aldrin enquanto Michael Collins pilotava o módulo de comando na órbita lunar, o evento representou o clímax da Corrida Espacial e ideológica entre os EUA e a URSS, estimulando avanços tecnológicos sem precedentes em telecomunicações, computação e ciência de materiais."
+        "headline": "Apollo 11 Pousa na Lua e o Ápice da Corrida Espacial",
+        "text": "O astronauta Neil Armstrong tornou-se o primeiro ser humano a pisar na superfície da Lua durante a missão Apollo 11 da NASA. O evento marcou o auge da disputa tecnológica e ideológica entre EUA e União Soviética na Guerra Fria, impulsionando a computação e as telecomunicações."
       }
     },
     {
-      "start_date": {
-        "year": "1989",
-        "month": "11",
-        "day": "09"
-      },
+      "start_date": { "year": "1989", "month": "11", "day": "09" },
+      "category": "Era Digital",
       "text": {
-        "headline": "Queda do Muro de Berlim e o Fim do Bloco Soviético",
-        "text": "Anúncios burocráticos confusos do governo da Alemanha Oriental (RDA) levaram milhares de cidadãos de Berlim a concentrarem-se nos pontos de passagem do Muro, forçando os guardas de fronteira a abrirem os portões. A população derrubou fisicamente a barreira que dividia a cidade desde 1961. O evento simbolizou o colapso do comunismo soviético na Europa Oriental, acelerou a reunificação da Alemanha em 1990 e antecipou a dissolução formal da União Soviética em dezembro de 1991, encerrando a era da Guerra Fria."
+        "headline": "Queda do Muro de Berlim e o Colapso do Bloco Soviético",
+        "text": "Cidadãos de Berlim derrubaram a barreira que dividia a cidade desde 1961. O evento simbolizou a queda do comunismo na Europa Oriental, acelerou a reunificação da Alemanha em 1990 e antecipou o fim da União Soviética e da Guerra Fria."
       }
     },
     {
-      "start_date": {
-        "year": "1991",
-        "month": "08",
-        "day": "06"
-      },
+      "start_date": { "year": "1991", "month": "08", "day": "06" },
+      "category": "Era Digital",
       "text": {
-        "headline": "Abertura Pública da World Wide Web e o Início da Era da Informação",
-        "text": "O cientista britânico Tim Berners-Lee publicou no laboratório do CERN, na Suíça, um resumo do projeto da World Wide Web, disponibilizando publicamente o primeiro servidor e navegador de internet. A invenção da arquitetura de hipertexto (HTTP, HTML e URLs) transformou a antiga rede militar/acadêmica ARPANET na teia mundial de computadores acessível ao público. A tecnologia revolucionou o comércio, a comunicação humana, a difusão do conhecimento global e pavimentou o caminho para a economia digital e as redes sociais contemporâneas."
+        "headline": "Abertura Pública da World Wide Web e a Era da Informação",
+        "text": "Tim Berners-Lee disponibilizou publicamente a World Wide Web no CERN. A invenção do HTTP, HTML e das URLs transformou a internet em uma rede global acessível, revolucionando o comércio, a comunicação e a circulação do conhecimento humano."
       }
     }
   ]
