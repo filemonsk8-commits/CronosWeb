@@ -1,296 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Escolar | Prof. Eduardo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linha do Tempo da História Geral</title>
+  
+  <!-- CSS do TimelineJS -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
     
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    /* Painel Superior de Busca e Filtros */
+    #filter-bar {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      position: relative;
+    }
 
-    <style>
-        :root { --primary: #0f172a; --accent: #3b82f6; --bg: #f1f5f9; --white: #ffffff; --text: #1e293b; --danger: #ef4444; --purple: #8b5cf6; --gray: #64748b; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 50px; }
-        
-        #login-screen { position: fixed; inset: 0; background: var(--primary); display: flex; align-items: center; justify-content: center; z-index: 10000; color: white; }
-        .login-box { background: #1e293b; padding: 30px; border-radius: 15px; width: 300px; text-align: center; }
-        .login-box input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; }
-        
-        nav { background: var(--white); padding: 10px; display: flex; gap: 8px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #e2e8f0; overflow-x: auto; }
-        .nav-btn { background: #e2e8f0; border: none; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; white-space: nowrap; }
-        .nav-btn.active { background: var(--accent); color: white; }
-        
-        .container { padding: 15px; max-width: 950px; margin: 0 auto; }
-        .card { background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .hidden { display: none !important; }
-        
-        .btn { background: var(--accent); color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
-        .btn-sm { width: auto; padding: 4px 8px; margin: 0; font-size: 11px; }
-        
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 8px; border: 1px solid #eee; text-align: center; font-size: 14px; }
-        
-        .item-aluno { display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; }
-        .controles-ordem { display: flex; gap: 3px; }
-        .turma-badge { background: #dbeafe; color: #1e40af; padding: 10px; border-radius: 8px; font-weight: bold; display: block; margin-bottom: 15px; text-align: center; }
-    </style>
+    .search-box {
+      flex: 1;
+      min-width: 280px;
+      max-width: 420px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background-color: #1e293b;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: #38bdf8;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background-color: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background-color: #334155;
+    }
+
+    .filter-btn.active {
+      background-color: #2563eb;
+      border-color: #3b82f6;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    #timeline-embed {
+      width: 100%;
+      height: calc(100vh - 65px);
+    }
+  </style>
 </head>
 <body>
 
-<div id="login-screen">
-    <div class="login-box">
-        <h2>Connect Escolar</h2>
-        <input type="email" id="l-email" placeholder="E-mail">
-        <input type="password" id="l-pass" placeholder="Senha">
-        <button class="btn" onclick="fazerLogin()">Entrar</button>
+  <!-- Controles de Busca e Filtros por Século -->
+  <div id="filter-bar">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Buscar por termo, ano (ex: 1822) ou data (ex: 22/04/1500)..." onkeyup="filtrarEventos()">
     </div>
-</div>
-
-<div id="main-app" class="hidden">
-    <nav>
-        <button onclick="mudarAba('vistos')" class="nav-btn active" id="nb-vistos">📅 Vistos</button>
-        <button onclick="mudarAba('conteudo')" class="nav-btn" id="nb-conteudo">📖 Conteúdos</button>
-        <button onclick="mudarAba('siap')" class="nav-btn" id="nb-siap">📊 SIAP</button>
-        <button onclick="mudarAba('ajustes')" class="nav-btn" id="nb-ajustes">⚙️ Ajustes</button>
-    </nav>
-
-    <div class="container">
-        <div id="sec-vistos" class="aba-content">
-            <div class="card">
-                <h3>Vistos</h3>
-                <select id="v-turma" onchange="carregarCalendario('vistos')" style="width:100%; padding:10px; border-radius:8px;"></select>
-                <div id='calendar-vistos' style="margin-top:15px;"></div>
-                <div id="area-vistos-edit" class="hidden">
-                    <div class="turma-badge" id="label-data-visto"></div>
-                    <div style="overflow-x:auto;">
-                        <table><thead><tr id="thr-vistos"></tr></thead><tbody id="tbody-vistos"></tbody></table>
-                    </div>
-                    <button class="btn" onclick="salvarVistos()">💾 Salvar Vistos</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="sec-conteudo" class="aba-content hidden">
-            <div class="card">
-                <h3>Diário de Conteúdo</h3>
-                <select id="c-turma" onchange="carregarCalendario('conteudo')" style="width:100%; padding:10px; border-radius:8px;"></select>
-                <div id='calendar-conteudo' style="margin-top:15px;"></div>
-                <div id="area-conteudo-edit" class="hidden">
-                    <div class="turma-badge" id="label-data-cont"></div>
-                    <textarea id="txt-conteudo" style="width:100%; height:100px; padding:10px; border-radius:8px;" placeholder="Conteúdo ministrado..."></textarea>
-                    <button class="btn" onclick="salvarConteudo()">💾 Salvar</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="sec-siap" class="aba-content hidden">
-            <div class="card">
-                <h3>SIAP - Ferramentas Prof. Eduardo</h3>
-                <button class="btn" onclick="gerarRelatorio()">1. Gerar Médias</button>
-                <button class="btn" style="background:var(--purple);" onclick="prepararInjecaoAlvo()">2. Copiar Injetor (Notas)</button>
-                <button class="btn" style="background:var(--gray);" onclick="prepararLimpezaSIAP()">3. Copiar Borracha (Limpar)</button>
-            </div>
-            <div id="relatorio-final" style="overflow-x:auto;" class="hidden"></div>
-        </div>
-
-        <div id="sec-ajustes" class="aba-content hidden">
-            <div class="card">
-                <h3>Gerenciar Turmas</h3>
-                <div style="display:flex; gap:5px;">
-                    <input type="text" id="new-turma" placeholder="Ex: 9°A Sociologia" style="flex:1; padding:10px; border-radius:8px; border:1px solid #ddd;">
-                    <button class="btn" style="margin:0; width:auto;" onclick="criarTurma()">Criar</button>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Reordenar Alunos (Sincronizar com SIAP)</h3>
-                <select id="adj-turma" onchange="listarAlunosAdj()" style="width:100%; padding:10px; border-radius:8px;"></select>
-                <textarea id="raw-alunos" style="width:100%; height:80px; margin-top:10px; padding:10px; border-radius:8px;" placeholder="Importar nova lista..."></textarea>
-                <button class="btn" onclick="importarAlunos()">📥 Importar Lista</button>
-                
-                <div id="lista-adj-alunos" style="margin-top:20px; border:1px solid #ddd; border-radius:8px; background:white;"></div>
-                <button id="btn-save-ordem" class="btn hidden" onclick="salvarOrdemAlunos()">💾 Salvar Nova Ordem</button>
-            </div>
-            <div class="card">
-                <button class="btn" style="background:var(--danger);" onclick="resetTotal()">🔥 RESETAR SISTEMA</button>
-            </div>
-        </div>
+    
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="filtrarPorSeculo('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filtrarPorSeculo(15, this)">Séc. XV (1401-1500)</button>
+      <button class="filter-btn" onclick="filtrarPorSeculo(18, this)">Séc. XVIII (1701-1800)</button>
+      <button class="filter-btn" onclick="filtrarPorSeculo(19, this)">Séc. XIX (1801-1900)</button>
+      <button class="filter-btn" onclick="filtrarPorSeculo(20, this)">Séc. XX (1901-2000)</button>
+      <button class="filter-btn" onclick="filtrarPorSeculo(21, this)">Séc. XXI (2001-2100)</button>
     </div>
-</div>
+  </div>
 
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyCTu2YNF6TXWGdjBtRrDW1dL5e5MoIPI4c",
-        authDomain: "classroom-b14f4.firebaseapp.com",
-        projectId: "classroom-b14f4",
-        databaseURL: "https://classroom-b14f4-default-rtdb.firebaseio.com",
-        storageBucket: "classroom-b14f4.firebasestorage.app",
-        messagingSenderId: "426978927988",
-        appId: "1:426978927988:web:370dee295ba6881e0bb821"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const auth = firebase.auth();
-    let calV, calC, dataSelVisto = "", dataSelCont = "", listaAlunosTemp = [];
+  <!-- Contêiner da Linha do Tempo -->
+  <div id="timeline-embed"></div>
 
-    function fazerLogin() {
-        const e = document.getElementById('l-email').value, p = document.getElementById('l-pass').value;
-        auth.signInWithEmailAndPassword(e, p).then(() => {
-            document.getElementById('login-screen').classList.add('hidden');
-            document.getElementById('main-app').classList.remove('hidden');
-            init();
-        }).catch(() => alert("Acesso negado!"));
+  <!-- JavaScript do TimelineJS -->
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  
+  <script>
+    let dadosOriginais = null;
+    let timelineInstance = null;
+
+    // Carrega o banco de dados JSON
+    fetch('timeline.json')
+      .then(response => response.json())
+      .then(data => {
+        dadosOriginais = data;
+        renderizarTimeline(dadosOriginais);
+      })
+      .catch(err => console.error('Erro ao carregar o timeline.json:', err));
+
+    function renderizarTimeline(dados) {
+      document.getElementById('timeline-embed').innerHTML = '';
+      timelineInstance = new TL.Timeline('timeline-embed', dados, {
+        language: 'pt',
+        initial_zoom: 2
+      });
     }
 
-    function init() {
-        calV = new FullCalendar.Calendar(document.getElementById('calendar-vistos'), {
-            initialView: 'dayGridMonth', locale: 'pt-br', contentHeight: 300,
-            dateClick: (i) => { dataSelVisto = i.dateStr; document.getElementById('label-data-visto').innerText = "Data: "+i.dateStr; document.getElementById('area-vistos-edit').classList.remove('hidden'); carregarTabelaVistos(); }
-        });
-        calC = new FullCalendar.Calendar(document.getElementById('calendar-conteudo'), {
-            initialView: 'dayGridMonth', locale: 'pt-br', contentHeight: 300,
-            dateClick: (i) => { dataSelCont = i.dateStr; document.getElementById('label-data-cont').innerText = "Data: "+i.dateStr; document.getElementById('area-conteudo-edit').classList.remove('hidden'); carregarTextoConteudo(); }
-        });
-        calV.render(); calC.render();
-        carregarMenus();
+    // Função para calcular o século de um ano específico
+    function calcularSeculo(ano) {
+      if (ano > 0) {
+        return Math.ceil(ano / 100);
+      } else {
+        // Anos antes de Cristo (a.C.)
+        return Math.floor(ano / 100);
+      }
     }
 
-    function carregarMenus() {
-        db.ref('turmas').on('value', s => {
-            let opts = ''; Object.keys(s.val()||{}).sort().forEach(t => opts += `<option value="${t}">${t}</option>`);
-            document.getElementById('v-turma').innerHTML = opts; document.getElementById('c-turma').innerHTML = opts; document.getElementById('adj-turma').innerHTML = opts;
-        });
+    // Busca Textual, por Ano e por Data (DD/MM/AAAA)
+    function filtrarEventos() {
+      const termo = document.getElementById('search-input').value.toLowerCase().trim();
+      if (!dadosOriginais) return;
+
+      // Reseta botões de filtro visualmente ao usar busca manual
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+
+      if (termo === '') {
+        document.querySelector('.filter-btn').classList.add('active'); // Reativa "Todos"
+        renderizarTimeline(dadosOriginais);
+        return;
+      }
+
+      const eventosFiltrados = dadosOriginais.events.filter(evento => {
+        const titulo = (evento.text.headline || '').toLowerCase();
+        const fato = (evento.text.text || '').toLowerCase();
+        
+        const ano = (evento.start_date.year || '').toString();
+        const mes = (evento.start_date.month || '').toString().padStart(2, '0');
+        const dia = (evento.start_date.day || '').toString().padStart(2, '0');
+        
+        const dataFormatadaBR = `${dia}/${mes}/${ano}`;
+
+        return titulo.includes(termo) || 
+               fato.includes(termo) || 
+               ano.includes(termo) || 
+               dataFormatadaBR.includes(termo);
+      });
+
+      renderizarTimeline({
+        title: dadosOriginais.title,
+        events: eventosFiltrados
+      });
     }
 
-    function mudarAba(id) {
-        document.querySelectorAll('.aba-content').forEach(a => a.classList.add('hidden'));
-        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('sec-'+id).classList.remove('hidden');
-        document.getElementById('nb-'+id).classList.add('active');
-        if(id==='vistos') setTimeout(()=>calV.render(), 100);
-        if(id==='conteudo') setTimeout(()=>calC.render(), 100);
-    }
+    // Filtro por Século
+    function filtrarPorSeculo(seculoAlvo, botao) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      botao.classList.add('active');
+      document.getElementById('search-input').value = '';
 
-    // AJUSTES: ORDENAÇÃO COM SETAS RÁPIDAS
-    function listarAlunosAdj() {
-        const t = document.getElementById('adj-turma').value;
-        db.ref('turmas/'+t).once('value', s => { listaAlunosTemp = s.val() || []; renderizarListaOrdenavel(); });
-    }
+      if (!dadosOriginais) return;
 
-    function renderizarListaOrdenavel() {
-        let h = '';
-        listaAlunosTemp.forEach((n, i) => {
-            h += `<div class="item-aluno">
-                <span style="font-size:13px;">${i+1}. ${n}</span>
-                <div class="controles-ordem">
-                    <button class="btn btn-sm" title="Mover para o topo" onclick="moverTopo(${i})">⏫</button>
-                    <button class="btn btn-sm" onclick="mover(${i}, -1)">↑</button>
-                    <button class="btn btn-sm" onclick="mover(${i}, 1)">↓</button>
-                    <button class="btn btn-sm" title="Mover para o final" onclick="moverFinal(${i})">⏬</button>
-                </div>
-            </div>`;
-        });
-        document.getElementById('lista-adj-alunos').innerHTML = h;
-        document.getElementById('btn-save-ordem').classList.remove('hidden');
-    }
+      if (seculoAlvo === 'todos') {
+        renderizarTimeline(dadosOriginais);
+        return;
+      }
 
-    function mover(idx, dir) {
-        let nova = idx + dir;
-        if(nova < 0 || nova >= listaAlunosTemp.length) return;
-        [listaAlunosTemp[idx], listaAlunosTemp[nova]] = [listaAlunosTemp[nova], listaAlunosTemp[idx]];
-        renderizarListaOrdenavel();
-    }
+      const eventosFiltrados = dadosOriginais.events.filter(evento => {
+        const ano = parseInt(evento.start_date.year, 10);
+        if (isNaN(ano)) return false;
 
-    function moverTopo(idx) {
-        const item = listaAlunosTemp.splice(idx, 1)[0];
-        listaAlunosTemp.unshift(item);
-        renderizarListaOrdenavel();
-    }
+        const seculoDoEvento = calcularSeculo(ano);
+        return seculoDoEvento === seculoAlvo;
+      });
 
-    function moverFinal(idx) {
-        const item = listaAlunosTemp.splice(idx, 1)[0];
-        listaAlunosTemp.push(item);
-        renderizarListaOrdenavel();
+      renderizarTimeline({
+        title: dadosOriginais.title,
+        events: eventosFiltrados
+      });
     }
-
-    function salvarOrdemAlunos() {
-        const t = document.getElementById('adj-turma').value;
-        db.ref('turmas/'+t).set(listaAlunosTemp).then(() => alert("✅ Ordem salva!"));
-    }
-
-    // BORRACHA SIAP
-    function prepararLimpezaSIAP() {
-        const script = `(function(){
-            alert("BORRACHA ATIVADA! Clique no 1º campo de nota para limpar tudo abaixo.");
-            function g(d){let i=Array.from(d.querySelectorAll('input[type="text"]:not([readonly])'));d.querySelectorAll('iframe').forEach(f=>{try{i=i.concat(g(f.contentDocument))}catch(e){}});return i}
-            const c=g(document);
-            c.forEach(el=>{
-                el.style.border="3px solid yellow";
-                el.onclick=function(){
-                    if(!confirm("Limpar notas a partir daqui?")) return;
-                    let s=c.indexOf(this);
-                    for(let i=0;i<60;i++){
-                        let t=c[s+i];
-                        if(t){
-                            t.value="";
-                            t.dispatchEvent(new Event('change',{bubbles:true}));
-                            t.style.backgroundColor="#fee2e2";
-                        }
-                    }
-                    alert("Limpo!");
-                }
-            });
-        })()`;
-        copy(script);
-    }
-
-    // RESTANTE DAS FUNÇÕES (VISTOS, CONTEÚDO, SIAP)
-    async function carregarTabelaVistos() {
-        const t = document.getElementById('v-turma').value;
-        const [sA, sV] = await Promise.all([db.ref('turmas/'+t).once('value'), db.ref(`vistos/${t}/${dataSelVisto}`).once('value')]);
-        const alunos = sA.val() || [], marcados = sV.val() || {};
-        document.getElementById('thr-vistos').innerHTML = `<th>Aluno</th>` + [1,2,3,4,5,6].map(n => `<th>${n}</th>`).join('');
-        let h = ''; alunos.forEach((n, i) => {
-            h += `<tr><td style="text-align:left">${n}</td>`;
-            for(let v=1; v<=6; v++) h += `<td><input type="checkbox" class="chk-v" data-idx="${i}" data-v="${v}" ${(marcados[i]&&marcados[i][v])?'checked':''}></td>`;
-            h += `</tr>`;
-        });
-        document.getElementById('tbody-vistos').innerHTML = h;
-    }
-
-    function salvarVistos() {
-        const t = document.getElementById('v-turma').value; let d = {};
-        document.querySelectorAll('.chk-v').forEach(el => { const {idx, v} = el.dataset; if(!d[idx]) d[idx] = {}; d[idx][v] = el.checked; });
-        db.ref(`vistos/${t}/${dataSelVisto}`).set(d).then(() => alert("Vistos Salvos!"));
-    }
-
-    async function gerarRelatorio() {
-        const t = document.getElementById('v-turma').value;
-        const [sA, sV] = await Promise.all([db.ref('turmas/'+t).once('value'), db.ref(`vistos/${t}`).once('value')]);
-        const alunos = sA.val() || [], todos = sV.val() || {};
-        let res = alunos.map(n => ({ n, total: 0 }));
-        Object.values(todos).forEach(dia => { Object.entries(dia).forEach(([idx, v]) => { if(res[idx]) res[idx].total += Object.values(v).filter(x => x === true).length; }); });
-        let teto = Math.max(...res.map(a => a.total), 1);
-        let h = `<table><tr><th>Aluno</th><th>Nota</th></tr>`;
-        res.forEach(a => h += `<tr><td style="text-align:left">${a.n}</td><td class="nota-final">${((a.total*10)/teto).toFixed(1).replace('.',',')}</td></tr>`);
-        document.getElementById('relatorio-final').innerHTML = h + `</table>`;
-        document.getElementById('relatorio-final').classList.remove('hidden');
-    }
-
-    function prepararInjecaoAlvo() {
-        const n = Array.from(document.querySelectorAll('.nota-final')).map(el => el.innerText);
-        const script = `(function(){const n=${JSON.stringify(n)};alert("Clique no 1º campo de nota.");function g(d){let i=Array.from(d.querySelectorAll('input[type="text"]:not([readonly])'));d.querySelectorAll('iframe').forEach(f=>{try{i=i.concat(g(f.contentDocument))}catch(e){}});return i}const c=g(document);c.forEach(el=>{el.style.border="3px solid yellow";el.onclick=function(){if(!confirm("Iniciar?"))return;let s=c.indexOf(this);n.forEach((v,i)=>{let t=c[s+i];if(t){t.value=v;t.dispatchEvent(new Event('change',{bubbles:true}));t.style.backgroundColor="#dcfce7";}});alert("OK!");}})})()`;
-        copy(script);
-    }
-
-    function copy(txt) { const tmp = document.createElement("textarea"); tmp.value = txt; document.body.appendChild(tmp); tmp.select(); document.execCommand('copy'); document.body.removeChild(tmp); alert("Código Copiado!"); }
-    function carregarCalendario(tipo) { const t = document.getElementById(tipo === 'vistos' ? 'v-turma' : 'c-turma').value; db.ref(`${tipo}/${t}`).on('value', s => { const cal = tipo==='vistos'?calV:calC; cal.removeAllEvents(); Object.keys(s.val()||{}).forEach(d => cal.addEvent({start:d, display:'background', color:tipo==='vistos'?'#fda4af':'#6ee7b7'})); }); }
-    function carregarTextoConteudo() { db.ref(`conteudo/${document.getElementById('c-turma').value}/${dataSelCont}`).once('value', s => document.getElementById('txt-conteudo').value = s.val() || ""); }
-    function salvarConteudo() { db.ref(`conteudo/${document.getElementById('c-turma').value}/${dataSelCont}`).set(document.getElementById('txt-conteudo').value).then(() => alert("Salvo!")); }
-    function criarTurma() { const n = document.getElementById('new-turma').value; if(n) db.ref(`turmas/${n}`).set(["Novo Aluno"]).then(() => alert("Criada!")); }
-    function importarAlunos() { const t = document.getElementById('adj-turma').value, l = document.getElementById('raw-alunos').value.split('\n').filter(x => x.trim() !== ""); if(l.length > 0) db.ref(`turmas/${t}`).set(l).then(() => alert("Importado!")); }
-    function resetTotal() { if(confirm("RESETAR TUDO?")) { if(prompt("Digite APAGAR")==="APAGAR") db.ref('/').remove().then(()=>location.reload()); } }
-</script>
+  </script>
 </body>
 </html>
