@@ -54,7 +54,6 @@
       margin: 0 auto 16px auto;
     }
 
-    /* Controls Bar */
     .controls {
       display: flex;
       flex-wrap: wrap;
@@ -100,7 +99,6 @@
       border-color: var(--accent-blue);
     }
 
-    /* Timeline Container */
     .timeline-container {
       position: relative;
       max-width: 900px;
@@ -109,7 +107,6 @@
       flex: 1;
     }
 
-    /* Central vertical line */
     .timeline-container::before {
       content: '';
       position: absolute;
@@ -131,7 +128,6 @@
     .timeline-item.left { left: 0; text-align: right; }
     .timeline-item.right { left: 50%; text-align: left; }
 
-    /* Central Dot */
     .timeline-item::after {
       content: '';
       position: absolute;
@@ -148,7 +144,6 @@
     .timeline-item.left::after { right: -10px; }
     .timeline-item.right::after { left: -10px; }
 
-    /* Card Box */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -198,7 +193,6 @@
       line-height: 1.6;
     }
 
-    /* Responsividade para Telas Menores */
     @media (max-width: 768px) {
       .timeline-container::before { left: 20px; }
       .timeline-item { width: 100%; padding-left: 45px; padding-right: 0; }
@@ -227,24 +221,34 @@
   <div class="timeline-container" id="timeline"></div>
 
   <script>
-    let bancoDados = null;
+    let bancoDados = [];
     let categoriaAtual = 'todas';
 
-    // Carrega o JSON
     fetch('timeline.json')
       .then(res => res.json())
       .then(data => {
-        bancoDados = data;
-        document.getElementById('main-title').innerText = data.title.headline;
-        document.getElementById('main-desc').innerText = data.title.text;
-        renderizar(data.events);
+        // Extração segura do Título e Descrição
+        if (typeof data.title === 'object' && data.title !== null) {
+          document.getElementById('main-title').innerText = data.title.headline || "Linha do Tempo";
+          document.getElementById('main-desc').innerText = data.title.text || "História Geral";
+        } else if (typeof data.title === 'string') {
+          document.getElementById('main-title').innerText = data.title;
+          document.getElementById('main-desc').innerText = "Linha do Tempo Histórica";
+        }
+
+        // Extração segura dos eventos (suporta 'events' ou 'eventos')
+        bancoDados = data.events || data.eventos || [];
+        renderizar(bancoDados);
       })
       .catch(err => {
-        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o timeline.json. Verifique se a sintaxe do JSON no GitHub está correta.</p>`;
+        console.error(err);
+        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o ficheiro timeline.json. Verifique o formato no GitHub.</p>`;
       });
 
     function formatarAno(ano) {
+      if (!ano) return '';
       const num = parseInt(ano, 10);
+      if (isNaN(num)) return ano;
       return num < 0 ? `${Math.abs(num)} a.C.` : `${num}`;
     }
 
@@ -252,23 +256,30 @@
       const container = document.getElementById('timeline');
       container.innerHTML = '';
 
-      if (eventos.length === 0) {
-        container.innerHTML = `<p style="text-align:center; color: var(--text-muted); width:100%;">Nenhum evento encontrado.</p>`;
+      if (!eventos || eventos.length === 0) {
+        container.innerHTML = `<p style="text-align:center; color: var(--text-muted); width:100%; margin-top:20px;">Nenhum evento encontrado.</p>`;
         return;
       }
 
       eventos.forEach((evt, index) => {
         const lado = index % 2 === 0 ? 'left' : 'right';
-        const anoFormatado = formatarAno(evt.start_date.year);
         
+        // Tratamento flexível dos campos de cada evento
+        const ano = evt.start_date ? evt.start_date.year : (evt.year || '');
+        const anoFormatado = formatarAno(ano);
+        
+        const titulo = evt.text ? (evt.text.headline || evt.text.title) : (evt.headline || evt.title || '');
+        const descricao = evt.text ? (evt.text.text || evt.text.desc) : (evt.text || evt.description || '');
+        const categoria = evt.category || evt.categoria || 'História';
+
         const item = document.createElement('div');
         item.className = `timeline-item ${lado}`;
         item.innerHTML = `
           <div class="card">
             <span class="card-date">${anoFormatado}</span>
-            <span class="card-badge">${evt.category || 'História'}</span>
-            <h2 class="card-title">${evt.text.headline}</h2>
-            <p class="card-desc">${evt.text.text}</p>
+            <span class="card-badge">${categoria}</span>
+            <h2 class="card-title">${titulo}</h2>
+            <p class="card-desc">${descricao}</p>
           </div>
         `;
         container.appendChild(item);
@@ -276,14 +287,20 @@
     }
 
     function filtrar() {
-      if (!bancoDados) return;
+      if (!bancoDados || bancoDados.length === 0) return;
       const termo = document.getElementById('search-input').value.toLowerCase();
 
-      const filtrados = bancoDados.events.filter(evt => {
-        const atendeCategoria = categoriaAtual === 'todas' || evt.category === categoriaAtual;
-        const atendeBusca = evt.text.headline.toLowerCase().includes(termo) ||
-                             evt.text.text.toLowerCase().includes(termo) ||
-                             evt.start_date.year.includes(termo);
+      const filtrados = bancoDados.filter(evt => {
+        const cat = evt.category || evt.categoria || '';
+        const titulo = evt.text ? (evt.text.headline || '') : (evt.headline || evt.title || '');
+        const desc = evt.text ? (evt.text.text || '') : (evt.text || evt.description || '');
+        const ano = evt.start_date ? String(evt.start_date.year) : String(evt.year || '');
+
+        const atendeCategoria = categoriaAtual === 'todas' || cat.toLowerCase() === categoriaAtual.toLowerCase();
+        const atendeBusca = titulo.toLowerCase().includes(termo) ||
+                             desc.toLowerCase().includes(termo) ||
+                             ano.includes(termo);
+
         return atendeCategoria && atendeBusca;
       });
 
