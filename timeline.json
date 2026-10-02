@@ -1,1 +1,335 @@
-
+{
+  "title": {
+    "media": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "caption": "A Noite Estrelada (1889) - Vincent van Gogh",
+      "credit": "Museum of Modern Art / Wikimedia Commons"
+    },
+    "text": {
+      "headline": "Linha do Tempo da História Geral",
+      "text": "Navegue cronologicamente pelos grandes marcos da humanidade ou utilize a busca superior para filtrar por termo, ano ou data exata (DD/MM/AAAA)."
+    }
+  },
+  "events": [
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Cuneiform_script.jpg",
+        "caption": "Tabuleta com escrita cuneiforme suméria",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "-3500",
+        "month": "01",
+        "day": "01"
+      },
+      "text": {
+        "headline": "Invenção da Escrita na Mesopotâmia",
+        "text": "Surgimento da escrita cuneiforme pelos sumérios. Esse avanço marca a transição da Pré-História para a História Antiga, permitindo o registro sistematizado de leis, comércio e religião."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/All_Giza_Pyramids.jpg",
+        "caption": "Complexo de Pirâmides de Gizé",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "-2560",
+        "month": "01",
+        "day": "01"
+      },
+      "text": {
+        "headline": "Construção da Grande Pirâmide de Gizé",
+        "text": "Erguida como tumba para o faraó Khufu (Qeóps), representa o ápice da engenharia do Antigo Império Egípcio e é a única das Sete Maravilhas do Mundo Antigo ainda preservada."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg",
+        "caption": "O Parthenon na Acrópole de Atenas",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "-447",
+        "month": "01",
+        "day": "01"
+      },
+      "text": {
+        "headline": "Apogeu da Grécia Clássica e do Parthenon",
+        "text": "Sob a liderança de Péricles, Atenas vive o Século de Ouro da filosofia, teatro e arquitetura, consolidando os pilares da democracia direta no mundo ocidental."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cesar-bust-castle-museum-linz.jpg",
+        "caption": "Busto de Júlio César",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "-44",
+        "month": "03",
+        "day": "15"
+      },
+      "text": {
+        "headline": "Assassinato de Júlio César (Idos de Março)",
+        "text": "Júlio César é assassinado no Senado Romano por senadores que temiam a tirania. O evento precipita o fim da República Romana e a ascensão do Império sob Otávio Augusto."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Sack_of_Rome_by_the_Visigoths_in_410_by_JN_Sylvestre_1890.jpg",
+        "caption": "Queda do Império Romano do Ocidente",
+        "credit": "Joseph-Noël Sylvestre"
+      },
+      "start_date": {
+        "year": "476",
+        "month": "09",
+        "day": "04"
+      },
+      "text": {
+        "headline": "Queda do Império Romano do Ocidente",
+        "text": "O último imperador romano, Rômulo Augústulo, é deposto pelo chefe germânico Odoacro. O evento encerra a Idade Antiga e inicia a Idade Média."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Hagia_Sophia_Mars_2013.jpg",
+        "caption": "Basílica de Hagia Sophia em Istambul",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "537",
+        "month": "12",
+        "day": "27"
+      },
+      "text": {
+        "headline": "Inauguração de Hagia Sophia e Código Justiniano",
+        "text": "O imperador Justiniano I consolida o apogeu do Império Bizantino com a inauguração da monumental Basílica de Hagia Sophia e a codificação do direito romano (Corpus Juris Civilis)."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Carolus_Magnus_by_Durer.jpg",
+        "caption": "Retrato de Carlos Magno por Albrecht Dürer",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "800",
+        "month": "12",
+        "day": "25"
+      },
+      "text": {
+        "headline": "Coroação de Carlos Magno",
+        "text": "O Rei dos Francos é coroado Imperador do Sacro Império Romano pelo Papa Leão III no Natal de 800, unificando boa parte da Europa Ocidental e promovendo o Renascimento Carolíngio."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Magna_Charta_Brit_Lib_Cotton_MS_Augustus_II_106.jpg",
+        "caption": "Cópia original da Magna Carta de 1215",
+        "credit": "British Library"
+      },
+      "start_date": {
+        "year": "1215",
+        "month": "06",
+        "day": "15"
+      },
+      "text": {
+        "headline": "Assinatura da Magna Carta na Inglaterra",
+        "text": "O rei João Sem-Terra é forçado pelos barões ingleses a assinar um documento que limita os poderes da monarquia, lançando as bases do constitucionalismo e dos direitos civis."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Taking_of_Constantinople.jpg",
+        "caption": "Cerco e Queda de Constantinopla",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1453",
+        "month": "05",
+        "day": "29"
+      },
+      "text": {
+        "headline": "Queda de Constantinopla",
+        "text": "As forças do Império Otomano, lideradas por Mehmed II, tomam Constantinopla. O evento encerra o Império Bizantino e marca formalmente o fim da Idade Média e início da Idade Moderna."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Gutenberg_press_model.jpg",
+        "caption": "Réplica da prensa de tipos móveis de Gutenberg",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1455",
+        "month": "02",
+        "day": "23"
+      },
+      "text": {
+        "headline": "Invenção da Prensa de Tipos Móveis",
+        "text": "Johannes Gutenberg conclui a impressão da Bíblia de 42 linhas. A prensa revoluciona a difusão da informação, impulsionando o Renascimento e a Reforma Protestante."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Desembarque_de_Pedro_%C3%81lvares_Cabral_em_Porto_Seguro_em_1500.jpg",
+        "caption": "Desembarque de Cabral em Porto Seguro (1500)",
+        "credit": "Oscar Pereira da Silva"
+      },
+      "start_date": {
+        "year": "1500",
+        "month": "04",
+        "day": "22"
+      },
+      "text": {
+        "headline": "Grandes Navegações: Chegada ao Brasil",
+        "text": "A esquadra de Pedro Álvares Cabral aporta no litoral sul da Bahia, inserindo o território sul-americano na rede de comércio e colonização das potências europeias."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Martin_Luther_95_Theses.jpg",
+        "caption": "Lutero afixando as 95 Teses em Wittenberg",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1517",
+        "month": "10",
+        "day": "31"
+      },
+      "text": {
+        "headline": "Início da Reforma Protestante",
+        "text": "O monge Martinho Lutero afixa suas 95 Teses na porta da Igreja do Castelo de Wittenberg, criticando a venda de indulgências e provocando a ruptura religiosa na Europa Ocidental."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Prise_de_la_Bastille.jpg",
+        "caption": "Queda da Bastilha em Paris (1789)",
+        "credit": "Jean-Pierre Houël"
+      },
+      "start_date": {
+        "year": "1789",
+        "month": "07",
+        "day": "14"
+      },
+      "text": {
+        "headline": "Revolução Francesa e Queda da Bastilha",
+        "text": "Populares tomam a prisão da Bastilha em Paris, simbolizando o colapso da Monarquia Absolutista. O movimento inaugura a Idade Contemporânea e difunde os ideais de Liberdade, Igualdade e Fraternidade."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Steam_engine_in_operation.gif",
+        "caption": "Máquina a vapor aprimorada por James Watt",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1804",
+        "month": "02",
+        "day": "21"
+      },
+      "text": {
+        "headline": "Aceleração da Revolução Industrial",
+        "text": "A invenção e aprimoramento da máquina a vapor e da locomotiva transformam radicalmente o modo de produção manufatureiro, o trabalho assalariado e a urbanização global."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Pedro_Am%C3%A9rico_-_Independ%C3%Aancia_ou_Morte.jpg",
+        "caption": "Independência ou Morte (1888) - Pedro Américo",
+        "credit": "Museu Paulista"
+      },
+      "start_date": {
+        "year": "1822",
+        "month": "09",
+        "day": "07"
+      },
+      "text": {
+        "headline": "Independência do Brasil",
+        "text": "D. Pedro I proclama a separação política de Portugal às margens do Riacho Ipiranga, estabelecendo o Império do Brasil."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Archduke_Franz_Ferdinand_of_Austria.jpg",
+        "caption": "Arquiduque Francisco Fernando momentos antes do atentado",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1914",
+        "month": "06",
+        "day": "28"
+      },
+      "text": {
+        "headline": "Atentado de Sarajevo e Primeira Guerra Mundial",
+        "text": "O assassinato do herdeiro do Império Austro-Húngaro, Francisco Fernando, desencadeia a crise diplomática que culmina no eclosão da Primeira Guerra Mundial."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/UN_flag_building.jpg",
+        "caption": "Sede das Nações Unidas após o fim da II Guerra",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1945",
+        "month": "09",
+        "day": "02"
+      },
+      "text": {
+        "headline": "Fim da Segunda Guerra Mundial e Criação da ONU",
+        "text": "A rendição das potências do Eixo põe fim ao maior conflito militar da história. O cenário do pós-guerra resulta na criação da Organização das Nações Unidas e no início da Guerra Fria."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Apollo_11_first_step.jpg",
+        "caption": "Neil Armstrong pisa na superfície lunar (1969)",
+        "credit": "NASA"
+      },
+      "start_date": {
+        "year": "1969",
+        "month": "07",
+        "day": "20"
+      },
+      "text": {
+        "headline": "Chegada do Homem à Lua (Missão Apollo 11)",
+        "text": "O astronauta norte-americano Neil Armstrong torna-se o primeiro ser humano a caminhar na Lua, marcando o ápice da Corrida Espacial entre Estados Unidos e União Soviética."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Fall_of_the_Berlin_Wall_1989.jpg",
+        "caption": "Queda do Muro de Berlim (1989)",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1989",
+        "month": "11",
+        "day": "09"
+      },
+      "text": {
+        "headline": "Queda do Muro de Berlim",
+        "text": "A abertura e demolição do muro que dividia Berlim simbolizam o colapso do bloco soviético, a reunificação alemã e o fim iminente da Guerra Fria."
+      }
+    },
+    {
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Tim_Berners-Lee_2012.jpg",
+        "caption": "Tim Berners-Lee, criador da World Wide Web",
+        "credit": "Wikimedia Commons"
+      },
+      "start_date": {
+        "year": "1991",
+        "month": "08",
+        "day": "06"
+      },
+      "text": {
+        "headline": "Lançamento da World Wide Web ao Público",
+        "text": "Tim Berners-Lee disponibiliza publicamente o primeiro site na rede mundial de computadores, inaugurando a era da informação e da hiperconexão digital global."
+      }
+    }
+  ]
+}
