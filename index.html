@@ -3,218 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linha do Tempo Detalhada da História Geral</title>
-  
-  <!-- CSS do TimelineJS -->
-  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <title>Linha do Tempo - História Geral</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --bg-dark: #090d16;
+      --card-bg: #131b2e;
+      --card-border: #23314f;
+      --accent-blue: #38bdf8;
+      --accent-gold: #f59e0b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
     }
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    /* Painel Superior de Busca e Filtros */
-    #filter-bar {
-      background-color: #0f172a;
-      color: #ffffff;
-      padding: 12px 20px;
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(180deg, #0f172a 0%, #090d16 100%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 24px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
       z-index: 100;
-      position: relative;
+      backdrop-filter: blur(8px);
     }
 
-    .search-box {
-      flex: 1;
-      min-width: 280px;
-      max-width: 420px;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 8px 14px;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      background-color: #1e293b;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
       color: #ffffff;
-      font-size: 14px;
-      outline: none;
-      transition: border-color 0.2s;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
     }
 
-    .search-box input:focus {
-      border-color: #38bdf8;
+    header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 600px;
+      margin: 0 auto 16px auto;
     }
 
-    .filter-buttons {
+    /* Controls Bar */
+    .controls {
       display: flex;
-      gap: 6px;
       flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .filter-btn {
-      background-color: #1e293b;
-      color: #e2e8f0;
-      border: 1px solid #334155;
-      padding: 6px 12px;
-      border-radius: 6px;
+    .search-input {
+      background: #1e293b;
+      border: 1px solid var(--card-border);
+      padding: 10px 16px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.9rem;
+      width: 280px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+
+    .btn-filter {
+      background: #1e293b;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
       cursor: pointer;
-      font-size: 13px;
       transition: all 0.2s;
     }
 
-    .filter-btn:hover {
-      background-color: #334155;
+    .btn-filter:hover, .btn-filter.active {
+      background: var(--accent-blue);
+      color: #0f172a;
+      border-color: var(--accent-blue);
     }
 
-    .filter-btn.active {
-      background-color: #2563eb;
-      border-color: #3b82f6;
-      color: #ffffff;
-      font-weight: 600;
+    /* Timeline Container */
+    .timeline-container {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
     }
 
-    #timeline-embed {
-      width: 100%;
-      height: calc(100vh - 65px);
+    /* Central vertical line */
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-blue) 0%, var(--card-border) 50%, var(--accent-gold) 100%);
+      transform: translateX(-50%);
     }
 
-    /* Otimização visual para modo apenas texto */
-    .tl-slide-content-container .tl-slide-media-only {
-      display: none !important;
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      width: 50%;
+      padding: 0 30px;
     }
-    .tl-slide-content-container .tl-slide-text-only {
-      width: 100% !important;
-      max-width: 850px;
-      margin: 0 auto;
+
+    .timeline-item.left { left: 0; text-align: right; }
+    .timeline-item.right { left: 50%; text-align: left; }
+
+    /* Central Dot */
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      border: 3px solid var(--bg-dark);
+      box-shadow: 0 0 8px var(--accent-blue);
+      z-index: 2;
+    }
+
+    .timeline-item.left::after { right: -10px; }
+    .timeline-item.right::after { left: -10px; }
+
+    /* Card Box */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-blue);
+    }
+
+    .card-date {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #1e293b;
+      color: var(--accent-blue);
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Responsividade para Telas Menores */
+    @media (max-width: 768px) {
+      .timeline-container::before { left: 20px; }
+      .timeline-item { width: 100%; padding-left: 45px; padding-right: 0; }
+      .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
+      .timeline-item.left::after, .timeline-item.right::after { left: 13px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Controles de Busca e Filtros por Século -->
-  <div id="filter-bar">
-    <div class="search-box">
-      <input type="text" id="search-input" placeholder="Buscar por termo, ano (ex: 1822) ou data (ex: 22/04/1500)..." onkeyup="filtrarEventos()">
-    </div>
+  <header>
+    <h1 id="main-title">Linha do Tempo da História</h1>
+    <p id="main-desc">Carregando dados...</p>
     
-    <div class="filter-buttons">
-      <button class="filter-btn active" onclick="filtrarPorSeculo('todos', this)">Todos</button>
-      <button class="filter-btn" onclick="filtrarPorSeculo(15, this)">Séc. XV (1401-1500)</button>
-      <button class="filter-btn" onclick="filtrarPorSeculo(18, this)">Séc. XVIII (1701-1800)</button>
-      <button class="filter-btn" onclick="filtrarPorSeculo(19, this)">Séc. XIX (1801-1900)</button>
-      <button class="filter-btn" onclick="filtrarPorSeculo(20, this)">Séc. XX (1901-2000)</button>
-      <button class="filter-btn" onclick="filtrarPorSeculo(21, this)">Séc. XXI (2001-2100)</button>
+    <div class="controls">
+      <input type="text" id="search-input" class="search-input" placeholder="Buscar termo, ano ou palavra..." onkeyup="filtrar()">
+      <button class="btn-filter active" onclick="filtrarCategoria('todas', this)">Todas</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Antiguidade', this)">Antiguidade</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Idade Média', this)">Idade Média</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Idade Moderna', this)">Moderna</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Idade Contemporânea', this)">Contemporânea</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Era Digital', this)">Digital</button>
     </div>
-  </div>
+  </header>
 
-  <!-- Contêiner da Linha do Tempo -->
-  <div id="timeline-embed"></div>
+  <div class="timeline-container" id="timeline"></div>
 
-  <!-- JavaScript do TimelineJS -->
-  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-  
   <script>
-    let dadosOriginais = null;
-    let timelineInstance = null;
+    let bancoDados = null;
+    let categoriaAtual = 'todas';
 
-    // Carrega o banco de dados JSON
+    // Carrega o JSON
     fetch('timeline.json')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
-        dadosOriginais = data;
-        renderizarTimeline(dadosOriginais);
+        bancoDados = data;
+        document.getElementById('main-title').innerText = data.title.headline;
+        document.getElementById('main-desc').innerText = data.title.text;
+        renderizar(data.events);
       })
-      .catch(err => console.error('Erro ao carregar o timeline.json:', err));
-
-    function renderizarTimeline(dados) {
-      document.getElementById('timeline-embed').innerHTML = '';
-      timelineInstance = new TL.Timeline('timeline-embed', dados, {
-        language: 'pt',
-        initial_zoom: 2
+      .catch(err => {
+        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o timeline.json. Verifique se a sintaxe do JSON no GitHub está correta.</p>`;
       });
+
+    function formatarAno(ano) {
+      const num = parseInt(ano, 10);
+      return num < 0 ? `${Math.abs(num)} a.C.` : `${num}`;
     }
 
-    // Função para calcular o século de um ano
-    function calcularSeculo(ano) {
-      if (ano > 0) {
-        return Math.ceil(ano / 100);
-      } else {
-        return Math.floor(ano / 100);
-      }
-    }
+    function renderizar(eventos) {
+      const container = document.getElementById('timeline');
+      container.innerHTML = '';
 
-    // Busca Textual, por Ano e por Data
-    function filtrarEventos() {
-      const termo = document.getElementById('search-input').value.toLowerCase().trim();
-      if (!dadosOriginais) return;
-
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-
-      if (termo === '') {
-        document.querySelector('.filter-btn').classList.add('active');
-        renderizarTimeline(dadosOriginais);
+      if (eventos.length === 0) {
+        container.innerHTML = `<p style="text-align:center; color: var(--text-muted); width:100%;">Nenhum evento encontrado.</p>`;
         return;
       }
 
-      const eventosFiltrados = dadosOriginais.events.filter(evento => {
-        const titulo = (evento.text.headline || '').toLowerCase();
-        const fato = (evento.text.text || '').toLowerCase();
+      eventos.forEach((evt, index) => {
+        const lado = index % 2 === 0 ? 'left' : 'right';
+        const anoFormatado = formatarAno(evt.start_date.year);
         
-        const ano = (evento.start_date.year || '').toString();
-        const mes = (evento.start_date.month || '').toString().padStart(2, '0');
-        const dia = (evento.start_date.day || '').toString().padStart(2, '0');
-        
-        const dataFormatadaBR = `${dia}/${mes}/${ano}`;
-
-        return titulo.includes(termo) || 
-               fato.includes(termo) || 
-               ano.includes(termo) || 
-               dataFormatadaBR.includes(termo);
-      });
-
-      renderizarTimeline({
-        title: dadosOriginais.title,
-        events: eventosFiltrados
+        const item = document.createElement('div');
+        item.className = `timeline-item ${lado}`;
+        item.innerHTML = `
+          <div class="card">
+            <span class="card-date">${anoFormatado}</span>
+            <span class="card-badge">${evt.category || 'História'}</span>
+            <h2 class="card-title">${evt.text.headline}</h2>
+            <p class="card-desc">${evt.text.text}</p>
+          </div>
+        `;
+        container.appendChild(item);
       });
     }
 
-    // Filtro por Século
-    function filtrarPorSeculo(seculoAlvo, botao) {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      botao.classList.add('active');
-      document.getElementById('search-input').value = '';
+    function filtrar() {
+      if (!bancoDados) return;
+      const termo = document.getElementById('search-input').value.toLowerCase();
 
-      if (!dadosOriginais) return;
-
-      if (seculoAlvo === 'todos') {
-        renderizarTimeline(dadosOriginais);
-        return;
-      }
-
-      const eventosFiltrados = dadosOriginais.events.filter(evento => {
-        const ano = parseInt(evento.start_date.year, 10);
-        if (isNaN(ano)) return false;
-
-        const seculoDoEvento = calcularSeculo(ano);
-        return seculoDoEvento === seculoAlvo;
+      const filtrados = bancoDados.events.filter(evt => {
+        const atendeCategoria = categoriaAtual === 'todas' || evt.category === categoriaAtual;
+        const atendeBusca = evt.text.headline.toLowerCase().includes(termo) ||
+                             evt.text.text.toLowerCase().includes(termo) ||
+                             evt.start_date.year.includes(termo);
+        return atendeCategoria && atendeBusca;
       });
 
-      renderizarTimeline({
-        title: dadosOriginais.title,
-        events: eventosFiltrados
-      });
+      renderizar(filtrados);
+    }
+
+    function filtrarCategoria(cat, btn) {
+      categoriaAtual = cat;
+      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filtrar();
     }
   </script>
 </body>
