@@ -4,316 +4,332 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Linha do Tempo - História Geral</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-  
   <style>
     :root {
-      --bg-dark: #090d16;
-      --card-bg: #131b2e;
-      --card-border: #23314f;
-      --accent-blue: #38bdf8;
-      --accent-gold: #f59e0b;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --border-color: #e2e8f0;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
     }
 
     header {
-      background: linear-gradient(180deg, #0f172a 0%, #090d16 100%);
-      border-bottom: 1px solid var(--card-border);
-      padding: 24px 20px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
+      margin-bottom: 30px;
+      padding: 20px 10px;
     }
 
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      color: #ffffff;
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
     }
 
     header p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      max-width: 600px;
-      margin: 0 auto 16px auto;
+      font-size: 1.05rem;
+      color: #666;
     }
 
     .controls {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      align-items: center;
-      max-width: 1000px;
-      margin: 0 auto;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    .search-input {
-      background: #1e293b;
-      border: 1px solid var(--card-border);
-      padding: 10px 16px;
-      border-radius: 20px;
-      color: #fff;
-      font-size: 0.9rem;
-      width: 260px;
+    @media (min-width: 600px) {
+      .controls {
+        flex-direction: row;
+      }
+    }
+
+    .search-box {
+      flex: 2;
+      padding: 12px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
       outline: none;
-      transition: all 0.2s ease;
+      transition: border-color 0.2s;
     }
 
-    .search-input:focus {
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    .search-box:focus {
+      border-color: var(--secondary-color);
     }
 
-    .btn-filter {
-      background: #1e293b;
-      border: 1px solid var(--card-border);
-      color: var(--text-muted);
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .btn-filter:hover, .btn-filter.active {
-      background: var(--accent-blue);
-      color: #0f172a;
-      border-color: var(--accent-blue);
-    }
-
-    .timeline-container {
-      position: relative;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .filter-select {
       flex: 1;
+      padding: 12px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff;
+      cursor: pointer;
+      outline: none;
     }
 
-    .timeline-container::before {
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .timeline::before {
       content: '';
       position: absolute;
+      left: 20px;
       top: 0;
       bottom: 0;
-      left: 50%;
-      width: 2px;
-      background: linear-gradient(180deg, var(--accent-blue) 0%, var(--card-border) 50%, var(--accent-gold) 100%);
-      transform: translateX(-50%);
+      width: 4px;
+      background: var(--secondary-color);
+      border-radius: 2px;
     }
 
-    .timeline-item {
+    .event-card {
       position: relative;
-      margin-bottom: 40px;
-      width: 50%;
-      padding: 0 30px;
+      margin-left: 50px;
+      margin-bottom: 30px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--secondary-color);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .timeline-item.left { left: 0; text-align: right; }
-    .timeline-item.right { left: 50%; text-align: left; }
+    .event-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
 
-    .timeline-item::after {
+    .event-card::before {
       content: '';
       position: absolute;
+      left: -37px;
       top: 20px;
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      background: var(--accent-blue);
-      border: 3px solid var(--bg-dark);
-      box-shadow: 0 0 8px var(--accent-blue);
-      z-index: 2;
+      background: #fff;
+      border: 4px solid var(--secondary-color);
     }
 
-    .timeline-item.left::after { right: -10px; }
-    .timeline-item.right::after { left: -10px; }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      transition: transform 0.2s, border-color 0.2s;
+    .event-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-blue);
-    }
-
-    .card-date {
-      display: inline-block;
-      font-size: 0.8rem;
+    .event-year {
       font-weight: 700;
-      color: var(--accent-gold);
-      letter-spacing: 1px;
-      margin-bottom: 6px;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    .event-category {
+      background-color: #ebf5fb;
+      color: var(--secondary-color);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
       text-transform: uppercase;
     }
 
-    .card-badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      background: #1e293b;
-      color: var(--accent-blue);
-      padding: 3px 8px;
-      border-radius: 10px;
-      margin-left: 8px;
-      border: 1px solid var(--card-border);
-    }
-
-    .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      color: #fff;
+    .event-title {
+      font-size: 1.3rem;
+      color: var(--primary-color);
       margin-bottom: 12px;
-      line-height: 1.3;
     }
 
-    .card-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
+    .event-text {
+      white-space: pre-wrap;
+      font-size: 0.98rem;
+      color: #4a5568;
       line-height: 1.6;
     }
 
-    @media (max-width: 768px) {
-      .timeline-container::before { left: 20px; }
-      .timeline-item { width: 100%; padding-left: 45px; padding-right: 0; }
-      .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
-      .timeline-item.left::after, .timeline-item.right::after { left: 13px; }
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      color: #718096;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #718096;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1 id="main-title">Linha do Tempo da História</h1>
-    <p id="main-desc">Carregando dados...</p>
-    
-    <div class="controls">
-      <input type="text" id="search-input" class="search-input" placeholder="Buscar termo, ano ou palavra..." onkeyup="filtrar()">
-      <button class="btn-filter active" onclick="filtrarCategoria('todas', this)">Todas</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Antiguidade', this)">Antiguidade</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Idade Média', this)">Idade Média</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Idade Moderna', this)">Idade Moderna</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Idade Contemporânea', this)">Contemporânea</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Política', this)">Política</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Atualidades', this)">Atualidades</button>
-    </div>
+    <h1 id="main-headline">Linha do Tempo Geral da História</h1>
+    <p id="main-subtext">Carregando dados...</p>
   </header>
 
-  <div class="timeline-container" id="timeline"></div>
+  <div class="controls">
+    <input type="text" id="search-input" class="search-box" placeholder="Pesquisar por título, palavra-chave ou ano...">
+    <select id="category-filter" class="filter-select">
+      <option value="all">Todas as Categorias</option>
+    </select>
+  </div>
+
+  <div class="timeline" id="timeline-container">
+    <!-- Eventos injetados via JavaScript -->
+  </div>
+
+  <footer>
+    <p>&copy; Linha do Tempo Histórica Interativa</p>
+  </footer>
 
   <script>
-    let bancoDados = [];
-    let categoriaAtual = 'todas';
+    let eventsData = [];
 
-    fetch('timeline.json')
-      .then(res => res.json())
-      .then(data => {
-        // Leitura flexível do título para evitar erros [object Object] ou undefined
-        if (typeof data.title === 'object' && data.title !== null) {
-          document.getElementById('main-title').innerText = data.title.headline || "Linha do Tempo";
-          document.getElementById('main-desc').innerText = data.title.text || "História Geral";
-        } else if (typeof data.title === 'string') {
-          document.getElementById('main-title').innerText = data.title;
-          document.getElementById('main-desc').innerText = "Linha do Tempo Histórica";
-        }
-
-        // Aceita a chave 'events' ou 'eventos' no JSON
-        bancoDados = data.events || data.eventos || [];
-        renderizar(bancoDados);
-      })
-      .catch(err => {
-        console.error("Erro ao carregar o JSON:", err);
-        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o arquivo timeline.json. Verifique o formato no repositório.</p>`;
-      });
-
-    function formatarAno(ano) {
-      if (!ano) return '';
-      const num = parseInt(ano, 10);
-      if (isNaN(num)) return ano;
-      return num < 0 ? `${Math.abs(num)} a.C.` : `${num}`;
+    // Função para formatar o ano (números negativos viram "a.C.")
+    function formatYear(yearStr) {
+      const year = parseInt(yearStr, 10);
+      if (isNaN(year)) return yearStr;
+      if (year < 0) {
+        return `${Math.abs(year)} a.C.`;
+      }
+      return `${year} d.C.`;
     }
 
-    function renderizar(eventos) {
-      const container = document.getElementById('timeline');
+    // Função para carregar o JSON e inicializar a página
+    async function loadTimeline() {
+      try {
+        const response = await fetch('timeline.json');
+        if (!response.ok) {
+          throw new Error('Não foi possível carregar o arquivo timeline.json');
+        }
+        const data = await response.json();
+
+        if (data.title) {
+          document.getElementById('main-headline').textContent = data.title.headline || 'Linha do Tempo';
+          document.getElementById('main-subtext').textContent = data.title.text || '';
+        }
+
+        eventsData = data.events || [];
+        populateCategoryFilter(eventsData);
+        renderEvents(eventsData);
+
+      } catch (error) {
+        console.error('Erro:', error);
+        document.getElementById('main-subtext').textContent = 'Erro ao carregar os dados. Verifique se o arquivo timeline.json está na mesma pasta.';
+      }
+    }
+
+    // Preenche o menu dropdown de categorias dinamicamente
+    function populateCategoryFilter(events) {
+      const categorySelect = document.getElementById('category-filter');
+      const categories = new Set();
+
+      events.forEach(event => {
+        if (event.category) {
+          categories.add(event.category);
+        }
+      });
+
+      categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat;
+        option.textContent = cat;
+        categorySelect.appendChild(option);
+      });
+    }
+
+    // Renderiza a lista de cartões da linha do tempo
+    function renderEvents(events) {
+      const container = document.getElementById('timeline-container');
       container.innerHTML = '';
 
-      if (!eventos || eventos.length === 0) {
-        container.innerHTML = `<p style="text-align:center; color: var(--text-muted); width:100%; margin-top:20px;">Nenhum evento encontrado.</p>`;
+      if (events.length === 0) {
+        container.innerHTML = '<div class="no-results">Nenhum evento encontrado para os termos pesquisados.</div>';
         return;
       }
 
-      eventos.forEach((evt, index) => {
-        const lado = index % 2 === 0 ? 'left' : 'right';
-        
-        // Tratamento flexível dos campos de cada evento
-        const ano = evt.start_date ? evt.start_date.year : (evt.year || '');
-        const anoFormatado = formatarAno(ano);
-        
-        const titulo = evt.text ? (evt.text.headline || evt.text.title) : (evt.headline || evt.title || '');
-        const descricao = evt.text ? (evt.text.text || evt.text.desc) : (evt.text || evt.description || '');
-        const categoria = evt.category || evt.categoria || 'História';
+      events.forEach(event => {
+        const card = document.createElement('div');
+        card.className = 'event-card';
 
-        const item = document.createElement('div');
-        item.className = `timeline-item ${lado}`;
-        item.innerHTML = `
-          <div class="card">
-            <span class="card-date">${anoFormatado}</span>
-            <span class="card-badge">${categoria}</span>
-            <h2 class="card-title">${titulo}</h2>
-            <p class="card-desc">${descricao}</p>
+        const yearText = event.start_date ? formatYear(event.start_date.year) : '';
+        const categoryText = event.category || 'Geral';
+        const headlineText = event.text ? event.text.headline : '';
+        const bodyText = event.text ? event.text.text : '';
+
+        card.innerHTML = `
+          <div class="event-header">
+            <span class="event-year">${yearText}</span>
+            <span class="event-category">${categoryText}</span>
           </div>
+          <h2 class="event-title">${headlineText}</h2>
+          <div class="event-text">${bodyText}</div>
         `;
-        container.appendChild(item);
+
+        container.appendChild(card);
       });
     }
 
-    function filtrar() {
-      if (!bancoDados || bancoDados.length === 0) return;
-      const termo = document.getElementById('search-input').value.toLowerCase();
+    // Aplica o filtro de busca textual e de categoria simultaneamente
+    function filterEvents() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const selectedCategory = document.getElementById('category-filter').value;
 
-      const filtrados = bancoDados.filter(evt => {
-        const cat = evt.category || evt.categoria || '';
-        const titulo = evt.text ? (evt.text.headline || '') : (evt.headline || evt.title || '');
-        const desc = evt.text ? (evt.text.text || '') : (evt.text || evt.description || '');
-        const ano = evt.start_date ? String(evt.start_date.year) : String(evt.year || '');
+      const filtered = eventsData.filter(event => {
+        const yearFormatted = event.start_date ? formatYear(event.start_date.year).toLowerCase() : '';
+        const rawYear = event.start_date ? event.start_date.year.toString() : '';
+        const headline = event.text && event.text.headline ? event.text.headline.toLowerCase() : '';
+        const text = event.text && event.text.text ? event.text.text.toLowerCase() : '';
+        const category = event.category ? event.category.toLowerCase() : '';
 
-        const atendeCategoria = categoriaAtual === 'todas' || cat.toLowerCase() === categoriaAtual.toLowerCase();
-        const atendeBusca = titulo.toLowerCase().includes(termo) ||
-                             desc.toLowerCase().includes(termo) ||
-                             ano.includes(termo);
+        const matchesSearch = headline.includes(searchTerm) || 
+                              text.includes(searchTerm) || 
+                              yearFormatted.includes(searchTerm) || 
+                              rawYear.includes(searchTerm) ||
+                              category.includes(searchTerm);
 
-        return atendeCategoria && atendeBusca;
+        const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
+
+        return matchesSearch && matchesCategory;
       });
 
-      renderizar(filtrados);
+      renderEvents(filtered);
     }
 
-    function filtrarCategoria(cat, btn) {
-      categoriaAtual = cat;
-      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filtrar();
-    }
+    // Event Listeners
+    document.getElementById('search-input').addEventListener('input', filterEvents);
+    document.getElementById('category-filter').addEventListener('change', filterEvents);
+
+    // Inicialização ao carregar a página
+    window.addEventListener('DOMContentLoaded', loadTimeline);
   </script>
 </body>
 </html>
