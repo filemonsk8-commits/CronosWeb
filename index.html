@@ -5,26 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Linha do Tempo Interativa</title>
 
-  <!-- PWA Settings -->
+  <!-- Configurações para Instalação no Celular/Tablet (PWA) -->
   <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="História PWA">
   
-  <!-- Manifest Inline para permitir instalação no Celular/Tablet -->
+  <!-- Manifest Inline para permitir "Instalar Aplicativo" -->
   <link rel="manifest" href='data:application/manifest+json,{"name":"Linha do Tempo Histórica","short_name":"História","start_url":".","display":"standalone","background_color":"#0f172a","theme_color":"#0f172a","icons":[{"src":"https://cdn-icons-png.flaticon.com/512/2231/2231467.png","sizes":"512x512","type":"image/png"}]}'>
 
   <style>
     :root {
-      --bg-overlay: rgba(15, 23, 42, 0.88);
-      --card-bg: rgba(30, 41, 59, 0.85);
-      --card-hover: rgba(51, 65, 85, 0.95);
-      --primary-text: #f8fafc;
-      --secondary-text: #cbd5e1;
+      /* Fundo da página clareado para a imagem de fundo ficar visível */
+      --bg-overlay: rgba(15, 23, 42, 0.35);
+      
+      /* Estilo dos cards com fundo escuro e opaco para dar leitura às letras */
+      --card-bg: rgba(15, 23, 42, 0.85);
+      --card-hover: rgba(30, 41, 59, 0.95);
+      --primary-text: #ffffff;
+      --secondary-text: #e2e8f0;
       --accent-color: #38bdf8;
       --accent-year: #fb7185;
-      --border-color: rgba(255, 255, 255, 0.15);
-      --modal-bg: rgba(15, 23, 42, 0.92);
+      --border-color: rgba(255, 255, 255, 0.25);
+      --modal-bg: rgba(15, 23, 42, 0.88);
     }
 
     * {
@@ -49,6 +52,7 @@
       text-align: center;
       margin-bottom: 25px;
       padding: 10px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     }
 
     header h1 {
@@ -88,6 +92,7 @@
       outline: none;
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .search-box { flex: 2; }
@@ -95,10 +100,10 @@
 
     .search-box:focus, .filter-select:focus {
       border-color: var(--accent-color);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
     }
 
-    /* Grid de Cards Responsivo */
+    /* Grid de Cards */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -119,6 +124,7 @@
       backdrop-filter: blur(12px);
       transition: transform 0.2s ease, background-color 0.2s ease;
       position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
     .card:active {
@@ -129,7 +135,7 @@
       .card:hover {
         transform: translateY(-4px);
         background-color: var(--card-hover);
-        border-color: rgba(56, 189, 248, 0.4);
+        border-color: rgba(56, 189, 248, 0.5);
       }
     }
 
@@ -147,14 +153,14 @@
     }
 
     .card-category {
-      background: rgba(56, 189, 248, 0.15);
+      background: rgba(56, 189, 248, 0.2);
       color: var(--accent-color);
       padding: 4px 10px;
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid rgba(56, 189, 248, 0.4);
     }
 
     .card-title {
@@ -172,7 +178,7 @@
       font-weight: 600;
     }
 
-    /* Modal / Popup Responsivo */
+    /* Modal / Pop-up de Detalhes */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -216,6 +222,7 @@
       position: relative;
       transform: translateY(100%);
       transition: transform 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
     }
 
     @media (min-width: 600px) {
@@ -262,7 +269,7 @@
       font-weight: 700;
       font-size: 0.8rem;
       text-transform: uppercase;
-      background: rgba(56, 189, 248, 0.15);
+      background: rgba(56, 189, 248, 0.2);
       padding: 3px 8px;
       border-radius: 6px;
       display: inline-block;
@@ -293,6 +300,8 @@
       text-align: center;
       padding: 40px 20px;
       color: var(--secondary-text);
+      background: var(--card-bg);
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -335,6 +344,7 @@
       return `${year} d.C.`;
     }
 
+    // Função que remove setas e formata a estrutura em tópicos
     function formatEventBody(rawText) {
       if (!rawText) return '';
       const lines = rawText.split('\n');
@@ -484,7 +494,7 @@
 
     window.addEventListener('DOMContentLoaded', loadTimeline);
 
-    // Registro do Service Worker para permitir instalação como PWA
+    // Registro do Service Worker para suporte PWA
     if ('serviceWorker' in navigator) {
       const swCode = `
         self.addEventListener('install', e => e.waitUntil(self.skipWaiting()));
