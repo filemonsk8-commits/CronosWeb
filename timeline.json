@@ -1,23 +1,47 @@
 {
   "title": {
-    "headline": "Linha do Tempo da História Geral",
-    "text": "Cronologia abrangente da Antiguidade à Era Contemporânea, com destaque para transformações políticas e atualidades."
+    "headline": "Linha do Tempo — Da Antiguidade à Idade Contemporânea",
+    "text": "Cronologia histórica abrangente detalhando processos socioeconômicos, dinâmicas de Política e Atualidades."
   },
   "events": [
     {
       "start_date": { "year": "-3500" },
       "category": "Antiguidade",
       "text": {
-        "headline": "Invenção da Escrita Cuneiforme",
-        "text": "Desenvolvida pelos sumérios na Mesopotâmia, marcando a transição da Pré-História para a Antiguidade."
+        "headline": "Surgimento das Primeiras Civilizações e Escrita",
+        "text": "Sedentarização, agricultura, formação das primeiras cidades na Mesopotâmia e invenção da escrita cuneiforme pelos sumérios."
+      }
+    },
+    {
+      "start_date": { "year": "-3000" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Unificação do Egito Antigo",
+        "text": "Formação do Estado egípcio centralizado sob a figura do Faraó, construção das pirâmides e escrita hieroglífica."
+      }
+    },
+    {
+      "start_date": { "year": "-1750" },
+      "category": "Política",
+      "text": {
+        "headline": "Código de Hamurábi",
+        "text": "Um dos primeiros conjuntos de leis escritas da história, baseado no Princípio de Talião ('olho por olho, dente por dente')."
       }
     },
     {
       "start_date": { "year": "-508" },
       "category": "Política",
       "text": {
-        "headline": "Nascimento da Democracia Ateniense",
-        "text": "Reformas de Clístenes em Atenas estabelecem as bases da participação política direta dos cidadãos."
+        "headline": "Democracia Ateniense",
+        "text": "Reformas de Clístenes em Atenas instituem a participação política direta dos cidadãos na Eclésia."
+      }
+    },
+    {
+      "start_date": { "year": "-450" },
+      "category": "Política",
+      "text": {
+        "headline": "Lei das Doze Tábuas em Roma",
+        "text": "Primeira codificação do Direito Romano escrito, resultante das lutas dos plebeus por igualdade jurídica."
       }
     },
     {
@@ -25,7 +49,7 @@
       "category": "Antiguidade",
       "text": {
         "headline": "Início do Império Romano",
-        "text": "Caio Otávio recebe o título de Augusto, consolidando a transição da República Romana para o Império."
+        "text": "Otávio Augusto assume o poder, dando início ao período da Pax Romana, expansão de estradas e consolidação do Direito Romano."
       }
     },
     {
@@ -33,7 +57,15 @@
       "category": "Idade Média",
       "text": {
         "headline": "Queda do Império Romano do Ocidente",
-        "text": "A deposição do imperador Rômulo Augusto marca formalmente o início da Idade Média na Europa."
+        "text": "Invasões germânicas culminam na deposição de Rômulo Augusto, marcando a transição para a Alta Idade Média e o Feudalismo."
+      }
+    },
+    {
+      "start_date": { "year": "622" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "A Hégira e Expansão do Islã",
+        "text": "Fuga de Maomé para Medina marca o início do calendário muçulmano e a rápida expansão árabe pelo Médio Oriente e Norte da África."
       }
     },
     {
@@ -41,7 +73,15 @@
       "category": "Política",
       "text": {
         "headline": "Outorga da Magna Carta",
-        "text": "Documento inglês que limitou os poderes do rei João Sem-Terra, criando precedentes para o constitucionalismo."
+        "text": "Os barões ingleses forçam o Rei João Sem-Terra a assinar o documento que limita os poderes da monarquia, marco do constitucionalismo."
+      }
+    },
+    {
+      "start_date": { "year": "1347" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Peste Negra na Europa",
+        "text": "Epidemia bubônica dizima um terço da população europeia, gerando escassez de mão de obra e crises no sistema feudal."
       }
     },
     {
@@ -49,15 +89,71 @@
       "category": "Idade Moderna",
       "text": {
         "headline": "Queda de Constantinopla",
-        "text": "Tomada da capital bizantina pelos turcos otomanos, sinalizando o fim da Idade Média e expansão das rotas marítimas."
+        "text": "Tomada da capital do Império Bizantino pelos turcos otomanos, encerrando a Idade Média e impulsionando a Expansão Marítima."
+      }
+    },
+    {
+      "start_date": { "year": "1500" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Chegada dos Portugueses ao Brasil",
+        "text": "Início do processo de colonização portuguesa na América do Sul, marcado pelo cultivo do açúcar, latifúndio e exploração do trabalho escravizado."
+      }
+    },
+    {
+      "start_date": { "year": "1517" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Reforma Protestante",
+        "text": "Martinho Lutero afixa as 95 Teses na Alemanha, questionando a Igreja Católica e dando origem ao Protestantismo, Calvinismo e Anglicanismo."
+      }
+    },
+    {
+      "start_date": { "year": "1648" },
+      "category": "Política",
+      "text": {
+        "headline": "Paz de Westfália e o Estado Moderno",
+        "text": "Tratados que encerraram a Guerra dos Trinta Anos e estabeleceram o conceito moderno de soberania nacional e diplomacia entre Estados."
+      }
+    },
+    {
+      "start_date": { "year": "1776" },
+      "category": "Política",
+      "text": {
+        "headline": "Independência dos Estados Unidos",
+        "text": "As Treze Colônias rompem com a Grã-Bretanha fundamentadas em princípios iluministas de liberdade e direitos individuais."
       }
     },
     {
       "start_date": { "year": "1789" },
-      "category": "Política",
+      "category": "Idade Contemporânea",
       "text": {
         "headline": "Revolução Francesa",
-        "text": "Processo político e social que derrubou o absolutismo, difundindo os ideais burgueses de Liberdade, Igualdade e Fraternidade."
+        "text": "Queda da Bastilha e publicação da Declaração dos Direitos do Homem e do Cidadão, destruindo as bases do Absolutismo europeu."
+      }
+    },
+    {
+      "start_date": { "year": "1800" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Primeira Revolução Industrial",
+        "text": "Pioneirismo inglês com a máquina a vapor, carvão mineral e surgimento do proletariado urbano e das fábricas."
+      }
+    },
+    {
+      "start_date": { "year": "1822" },
+      "category": "Política",
+      "text": {
+        "headline": "Independência do Brasil",
+        "text": "Rompimento com Portugal e criação do Império do Brasil sob o governo de D. Pedro I, seguido pela Constituição de 1824."
+      }
+    },
+    {
+      "start_date": { "year": "1888" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Abolição da Escravatura no Brasil",
+        "text": "Assinatura da Lei Áurea encerrando formalmente séculos de escravização africana no país, seguida pela Proclamação da República em 1889."
       }
     },
     {
@@ -65,15 +161,55 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Primeira Guerra Mundial",
-        "text": "Conflito global impulsionado pelo imperialismo e nacionalismo, alterando radicalmente o mapa político europeu."
+        "text": "Conflito imperialista global motivado por rivalidades europeias, corrida armamentista e política de alianças militares."
       }
     },
     {
-      "start_date": { "year": "1945" },
+      "start_date": { "year": "1917" },
       "category": "Política",
       "text": {
-        "headline": "Criação da Organização das Nações Unidas (ONU)",
-        "text": "Fundada no pós-Segunda Guerra para promover a cooperação internacional e evitar novos conflitos globais."
+        "headline": "Revolução Russa",
+        "text": "Derrubada do czarismo e tomada do poder pelos Bolcheviques sob liderança de Lênin, levando à criação da URSS em 1922."
+      }
+    },
+    {
+      "start_date": { "year": "1930" },
+      "category": "Política",
+      "text": {
+        "headline": "Era Vargas no Brasil",
+        "text": "Revolução de 1930 leva Getúlio Vargas ao poder, iniciando o processo de industrialização nacional, CLT e o Estado Novo."
+      }
+    },
+    {
+      "start_date": { "year": "1939" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Segunda Guerra Mundial",
+        "text": "Confronto entre Aliados e o Eixo Totalitário. Termina em 1945 com a derrota do Nazifascismo, o Holocausto e a criação da ONU."
+      }
+    },
+    {
+      "start_date": { "year": "1947" },
+      "category": "Política",
+      "text": {
+        "headline": "Início da Guerra Fria",
+        "text": "Bipolarização geopolítica mundial entre EUA (Capitalismo) e URSS (Socialismo), marcada por corridas armamentista e espacial."
+      }
+    },
+    {
+      "start_date": { "year": "1964" },
+      "category": "Política",
+      "text": {
+        "headline": "Ditadura Militar no Brasil",
+        "text": "Golpe civil-militar depõe João Goulart. Período marcado por repressão, AI-5, censura e posterior abertura política até 1985."
+      }
+    },
+    {
+      "start_date": { "year": "1988" },
+      "category": "Política",
+      "text": {
+        "headline": "Constituição Cidadã do Brasil",
+        "text": "Promulgação da nova carta constitucional brasileira, restabelecendo a democracia e garantindo direitos civis e sociais."
       }
     },
     {
@@ -81,31 +217,31 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Queda do Muro de Berlim",
-        "text": "Símbolo do fim da Guerra Fria e da reunificação alemã, reconfigurando a geopolítica mundial."
+        "text": "Símbolo do colapso do bloco socialista no Leste Europeu e prelúdio do fim da União Soviética em 1991."
       }
     },
     {
       "start_date": { "year": "2020" },
       "category": "Atualidades",
       "text": {
-        "headline": "Pandemia Global de COVID-19",
-        "text": "Crise sanitária mundial que acelerou a transformação digital, o trabalho remoto e redefiniu políticas públicas regionais."
+        "headline": "Pandemia de COVID-19",
+        "text": "Crise sanitária global que acelerou o trabalho remoto, a digitalização do ensino e redefiniu políticas públicas em escala mundial."
       }
     },
     {
       "start_date": { "year": "2022" },
       "category": "Atualidades",
       "text": {
-        "headline": "Conflito Geopolítico Leste Europeu",
-        "text": "Eclosão de disputas territoriais e sanções internacionais que impactaram a segurança energética e a economia global."
+        "headline": "Reconfiguração Geopolítica Mundial",
+        "text": "Conflitos no Leste Europeu e tensões globais impactam o comércio, cadeias de mantimentos e a transição energética."
       }
     },
     {
       "start_date": { "year": "2024" },
       "category": "Atualidades",
       "text": {
-        "headline": "Avanço e Regulamentação da Inteligência Artificial",
-        "text": "Debates globais e primeiras legislações estruturadas sobre o impacto da IA na sociedade, trabalho e ética."
+        "headline": "Revolução da Inteligência Artificial e Plataformização",
+        "text": "Consolidação dos modelos de IA generativa, debates de regulamentação ética, Uberização do trabalho e novos ecossistemas digitais."
       }
     }
   ]
