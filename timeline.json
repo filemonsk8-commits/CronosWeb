@@ -1,23 +1,31 @@
 {
   "title": {
-    "headline": "Linha do Tempo — Da Antiguidade à Idade Contemporânea",
-    "text": "Cronologia histórica abrangente detalhando processos socioeconômicos, dinâmicas de Política e Atualidades."
+    "headline": "Linha do Tempo Geral da História",
+    "text": "Da Antiguidade à Atualidade — Cronologia detalhada de processos socioeconômicos, dinâmicas de Política e Atualidades."
   },
   "events": [
+    {
+      "start_date": { "year": "-10000" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Revolução Neolítica",
+        "text": "CONTEXTO: Grupos humanos viviam principalmente da caça, pesca e coleta.\n\nACONTECIMENTO: Desenvolvimento da agricultura e domesticação de animais.\n\nPOR QUÊ?\n→ Mudanças ambientais\n→ Conhecimento acumulado sobre plantas e animais\n→ Busca por novas formas de sobrevivência\n\nCONSEQUÊNCIAS:\n→ Sedentarização\n→ Formação de aldeias\n→ Crescimento populacional\n→ Produção de excedentes\n→ Divisão do trabalho\n→ Aumento das desigualdades sociais\n\nCONEXÃO: Agricultura → excedente → propriedade → desigualdade → cidades → Estado."
+      }
+    },
     {
       "start_date": { "year": "-3500" },
       "category": "Antiguidade",
       "text": {
-        "headline": "Surgimento das Primeiras Civilizações e Escrita",
-        "text": "Sedentarização, agricultura, formação das primeiras cidades na Mesopotâmia e invenção da escrita cuneiforme pelos sumérios."
+        "headline": "Surgimento da Escrita",
+        "text": "CONTEXTO: As primeiras cidades precisavam administrar terras, impostos, comércio, estoques e produção.\n\nACONTECIMENTO: Os sumérios desenvolveram a escrita cuneiforme.\n\nPOR QUÊ?\n→ Necessidade administrativa\n→ Controle econômico\n→ Registro de propriedades e transações\n\nCONSEQUÊNCIAS:\n→ Administração mais complexa\n→ Registros históricos\n→ Fortalecimento do Estado\n→ Desenvolvimento das leis."
       }
     },
     {
-      "start_date": { "year": "-3000" },
+      "start_date": { "year": "-3500" },
       "category": "Antiguidade",
       "text": {
-        "headline": "Unificação do Egito Antigo",
-        "text": "Formação do Estado egípcio centralizado sob a figura do Faraó, construção das pirâmides e escrita hieroglífica."
+        "headline": "Mesopotâmia",
+        "text": "SUMÉRIOS:\n→ Cidades-Estado\n→ Escrita cuneiforme\n→ Agricultura irrigada\n\nACÁDIOS:\n→ Formação de um dos primeiros grandes impérios.\n\nBABILÔNIOS:\n→ Hamurábi\n→ Código de Hamurábi\n\nASSÍRIOS:\n→ Forte militarização\n→ Expansão territorial\n\nNEOBABILÔNIOS:\n→ Nabucodonosor II\n→ Grande desenvolvimento de Babilônia"
       }
     },
     {
@@ -25,31 +33,87 @@
       "category": "Política",
       "text": {
         "headline": "Código de Hamurábi",
-        "text": "Um dos primeiros conjuntos de leis escritas da história, baseado no Princípio de Talião ('olho por olho, dente por dente')."
+        "text": "CONTEXTO: O Império Babilônico precisava organizar uma sociedade complexa e desigual.\n\nACONTECIMENTO: Hamurábi reuniu leis e punições em um código.\n\nPOR QUÊ?\n→ Organizar relações sociais\n→ Reforçar a autoridade do Estado\n→ Regular conflitos e propriedades\n\nCONSEQUÊNCIAS:\n→ Maior organização jurídica\n→ Reforço do poder do rei\n→ Registro das diferenças sociais."
       }
     },
     {
-      "start_date": { "year": "-508" },
-      "category": "Política",
-      "text": {
-        "headline": "Democracia Ateniense",
-        "text": "Reformas de Clístenes em Atenas instituem a participação política direta dos cidadãos na Eclésia."
-      }
-    },
-    {
-      "start_date": { "year": "-450" },
-      "category": "Política",
-      "text": {
-        "headline": "Lei das Doze Tábuas em Roma",
-        "text": "Primeira codificação do Direito Romano escrito, resultante das lutas dos plebeus por igualdade jurídica."
-      }
-    },
-    {
-      "start_date": { "year": "-27" },
+      "start_date": { "year": "-3100" },
       "category": "Antiguidade",
       "text": {
-        "headline": "Início do Império Romano",
-        "text": "Otávio Augusto assume o poder, dando início ao período da Pax Romana, expansão de estradas e consolidação do Direito Romano."
+        "headline": "Unificação do Egito",
+        "text": "CONTEXTO: Comunidades agrícolas desenvolveram-se ao longo do rio Nilo.\n\nACONTECIMENTO: Unificação do Alto e Baixo Egito.\n\nPOR QUÊ?\n→ Controle territorial\n→ Organização da produção agrícola\n→ Centralização política\n\nCONSEQUÊNCIAS:\n→ Formação do Estado egípcio\n→ Poder faraônico\n→ Grandes obras\n→ Sistema administrativo\n→ Desenvolvimento da escrita."
+      }
+    },
+    {
+      "start_date": { "year": "-2600" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Pirâmides de Gizé",
+        "text": "CONTEXTO: O Estado egípcio possuía grande capacidade de mobilizar trabalhadores e recursos.\n\nACONTECIMENTO: Construção das grandes pirâmides.\n\nPOR QUÊ?\n→ Crenças funerárias\n→ Culto ao faraó\n→ Demonstração do poder estatal\n\nCONSEQUÊNCIAS:\n→ Monumentos religiosos e políticos\n→ Desenvolvimento de técnicas de engenharia\n→ Símbolo do poder egípcio."
+      }
+    },
+    {
+      "start_date": { "year": "-1500" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Fenícios",
+        "text": "→ Comércio marítimo\n→ Navegação\n→ Formação de colônias\n→ Difusão do alfabeto fenício\n\nPOR QUÊ?\n→ Busca por mercados\n→ Controle de rotas comerciais\n\nCONSEQUÊNCIA: Ampliação das redes comerciais do Mediterrâneo."
+      }
+    },
+    {
+      "start_date": { "year": "-1000" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Reinos Hebraicos",
+        "text": "CONTEXTO: Comunidades hebraicas formaram estruturas políticas na região do antigo Canaã.\n\nACONTECIMENTO: Reinos de Israel e Judá.\n\nCONSEQUÊNCIAS:\n→ Desenvolvimento do judaísmo\n→ Tradições religiosas e culturais\n→ Influência posterior sobre cristianismo e islamismo."
+      }
+    },
+    {
+      "start_date": { "year": "-550" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Império Persa",
+        "text": "CONTEXTO: Ciro II iniciou grande expansão territorial.\n\nACONTECIMENTO: Formação de um dos maiores impérios do mundo antigo.\n\nPOR QUÊ?\n→ Expansão política\n→ Controle de territórios e rotas comerciais\n\nCONSEQUÊNCIAS:\n→ Administração por satrapias\n→ Estradas\n→ Integração comercial\n→ Conflitos com os gregos."
+      }
+    },
+    {
+      "start_date": { "year": "-800" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Grécia Antiga",
+        "text": "CONTEXTO: Comunidades gregas desenvolveram diferentes formas de organização política.\n\nACONTECIMENTO: Formação das pólis.\n\nATENAS: Democracia, Filosofia, Comércio.\nESPARTA: Militarização, Sociedade oligárquica.\n\nMARCOS:\n776 a.C. — Primeiros Jogos Olímpicos tradicionais.\n508/507 a.C. — Reformas de Clístenes.\n431–404 a.C. — Guerra do Peloponeso.\n399 a.C. — Execução de Sócrates.\n334–323 a.C. — Conquistas de Alexandre."
+      }
+    },
+    {
+      "start_date": { "year": "-334" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Alexandre, o Grande",
+        "text": "CONTEXTO: A Macedônia havia conquistado influência sobre as pólis gregas.\n\nACONTECIMENTO: Alexandre conquistou o Império Persa e avançou até a Ásia.\n\nPOR QUÊ?\n→ Expansão política e militar\n→ Fortalecimento da Macedônia\n\nCONSEQUÊNCIAS:\n→ Grande império\n→ Difusão da cultura grega\n→ Misturas culturais\n→ Helenismo."
+      }
+    },
+    {
+      "start_date": { "year": "-753" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Roma",
+        "text": "753 a.C. — Fundação tradicional de Roma.\n509 a.C. — Início da República.\n264–146 a.C. — Guerras Púnicas.\n73–71 a.C. — Revolta de Espártaco.\n49 a.C. — César atravessa o Rubicão.\n44 a.C. — Assassinato de Júlio César.\n27 a.C. — Otávio torna-se Augusto.\n313 d.C. — Édito de Milão.\n380 d.C. — Cristianismo niceno torna-se religião oficial.\n395 d.C. — Divisão definitiva do Império.\n476 d.C. — Queda do Império Romano do Ocidente."
+      }
+    },
+    {
+      "start_date": { "year": "-264" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Guerras Púnicas",
+        "text": "CONTEXTO: Roma e Cartago disputavam o domínio do Mediterrâneo.\n\nACONTECIMENTO: Três guerras entre Roma e Cartago.\n\nPOR QUÊ?\n→ Controle territorial\n→ Comércio\n→ Rotas marítimas\n→ Poder político\n\nCONSEQUÊNCIAS:\n→ Destruição de Cartago\n→ Expansão romana\n→ Aumento da escravidão\n→ Crescimento das desigualdades."
+      }
+    },
+    {
+      "start_date": { "year": "313" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Expansão do Cristianismo",
+        "text": "CONTEXTO: O cristianismo surgiu no mundo romano.\n\nACONTECIMENTO: Expansão das comunidades cristãs.\n\nPOR QUÊ?\n→ Pregação de Jesus\n→ Ação dos primeiros cristãos e missionários\n\nMARCOS:\n313 d.C. — Édito de Milão.\n380 d.C. — Cristianismo niceno torna-se religião oficial.\n\nCONSEQUÊNCIA: Transformação profunda da cultura e política do mundo romano."
       }
     },
     {
@@ -57,39 +121,87 @@
       "category": "Idade Média",
       "text": {
         "headline": "Queda do Império Romano do Ocidente",
-        "text": "Invasões germânicas culminam na deposição de Rômulo Augusto, marcando a transição para a Alta Idade Média e o Feudalismo."
+        "text": "CONSEQUÊNCIAS:\n→ Formação de reinos germânicos\n→ Transformação política da Europa\n→ Fortalecimento gradual da Igreja."
       }
     },
     {
       "start_date": { "year": "622" },
       "category": "Idade Média",
       "text": {
-        "headline": "A Hégira e Expansão do Islã",
-        "text": "Fuga de Maomé para Medina marca o início do calendário muçulmano e a rápida expansão árabe pelo Médio Oriente e Norte da África."
+        "headline": "Hégira",
+        "text": "CONTEXTO: Conflitos envolvendo Maomé e grupos de Meca.\n\nACONTECIMENTO: Maomé migra para Medina.\n\nCONSEQUÊNCIA:\n→ Marco inicial do calendário islâmico\n→ Expansão posterior do islamismo."
+      }
+    },
+    {
+      "start_date": { "year": "700" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Expansão do Islamismo (Séc. VII–VIII)",
+        "text": "POR QUÊ?\n→ Expansão política\n→ Expansão religiosa\n→ Controle de territórios e rotas comerciais\n\nCONSEQUÊNCIAS:\n→ Formação de grandes Estados\n→ Desenvolvimento comercial\n→ Desenvolvimento científico e cultural."
+      }
+    },
+    {
+      "start_date": { "year": "768" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Carlos Magno",
+        "text": "CONTEXTO: O Reino Franco tornou-se uma potência europeia.\n\nACONTECIMENTO: Carlos Magno expandiu seu território.\n\n800 — Coroação como imperador.\n\nCONSEQUÊNCIAS:\n→ Fortalecimento do poder franco\n→ Relação entre Igreja e poder político\n→ Influência na organização medieval europeia."
+      }
+    },
+    {
+      "start_date": { "year": "1096" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Cruzadas",
+        "text": "CONTEXTO: Disputas políticas, religiosas e territoriais.\n\nPOR QUÊ?\n→ Motivações religiosas\n→ Interesses políticos\n→ Interesses econômicos\n→ Disputas territoriais\n\nCONSEQUÊNCIAS:\n→ Conflitos entre cristãos e muçulmanos\n→ Expansão de contatos comerciais\n→ Intercâmbios culturais\n→ Transformações políticas."
       }
     },
     {
       "start_date": { "year": "1215" },
       "category": "Política",
       "text": {
-        "headline": "Outorga da Magna Carta",
-        "text": "Os barões ingleses forçam o Rei João Sem-Terra a assinar o documento que limita os poderes da monarquia, marco do constitucionalismo."
+        "headline": "Magna Carta",
+        "text": "CONTEXTO: Conflitos entre o rei inglês e setores da nobreza.\n\nACONTECIMENTO: João Sem Terra aceita a Magna Carta.\n\nPOR QUÊ?\n→ Pressão política da nobreza.\n\nCONSEQUÊNCIA:\n→ Limitação do poder real\n→ Posterior influência sobre ideias constitucionais."
       }
     },
     {
       "start_date": { "year": "1347" },
       "category": "Idade Média",
       "text": {
-        "headline": "Peste Negra na Europa",
-        "text": "Epidemia bubônica dizima um terço da população europeia, gerando escassez de mão de obra e crises no sistema feudal."
+        "headline": "Peste Negra",
+        "text": "CONTEXTO: Rotas comerciais conectavam diferentes regiões.\n\nACONTECIMENTO: Grande epidemia atingiu a Europa.\n\nPOR QUÊ?\n→ Disseminação da peste bubônica.\n\nCONSEQUÊNCIAS:\n→ Grande mortalidade\n→ Falta de trabalhadores\n→ Transformações econômicas\n→ Crises sociais\n→ Mudanças culturais."
+      }
+    },
+    {
+      "start_date": { "year": "1337" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Guerra dos Cem Anos",
+        "text": "CONTEXTO: Disputas territoriais e dinásticas entre Inglaterra e França.\n\nCONSEQUÊNCIAS:\n→ Fortalecimento das monarquias\n→ Transformações militares\n→ Fortalecimento de identidades políticas."
       }
     },
     {
       "start_date": { "year": "1453" },
-      "category": "Idade Moderna",
+      "category": "Idade Média",
       "text": {
         "headline": "Queda de Constantinopla",
-        "text": "Tomada da capital do Império Bizantino pelos turcos otomanos, encerrando a Idade Média e impulsionando a Expansão Marítima."
+        "text": "CONTEXTO: O Império Bizantino estava enfraquecido.\n\nACONTECIMENTO: Otomanos conquistam Constantinopla.\n\nPOR QUÊ?\n→ Expansão otomana\n→ Importância estratégica da cidade\n\nCONSEQUÊNCIAS:\n→ Fortalecimento otomano\n→ Mudanças nas relações comerciais\n→ Marco tradicional do fim da Idade Média."
+      }
+    },
+    {
+      "start_date": { "year": "1450" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Imprensa",
+        "text": "ACONTECIMENTO: Gutenberg aperfeiçoa a impressão de tipos móveis.\n\nPOR QUÊ?\n→ Reprodução mais rápida de textos.\n\nCONSEQUÊNCIAS:\n→ Maior circulação de livros\n→ Difusão de ideias\n→ Expansão da alfabetização\n→ Influência sobre Reforma e ciência."
+      }
+    },
+    {
+      "start_date": { "year": "1415" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Expansão Marítima",
+        "text": "MARCOS:\n1415 — Conquista de Ceuta.\n1488 — Bartolomeu Dias chega ao Cabo da Boa Esperança.\n1492 — Colombo chega à América.\n1494 — Tratado de Tordesilhas.\n1498 — Vasco da Gama chega à Índia.\n\nPOR QUÊ?\n→ Busca por novas rotas comerciais\n→ Especiarias\n→ Expansão territorial\n→ Interesses religiosos\n→ Competição entre monarquias.\n\nCONSEQUÊNCIAS:\n→ Colonização\n→ Escravização\n→ Expansão do comércio atlântico\n→ Formação de redes econômicas globais."
       }
     },
     {
@@ -97,7 +209,7 @@
       "category": "Idade Moderna",
       "text": {
         "headline": "Chegada dos Portugueses ao Brasil",
-        "text": "Início do processo de colonização portuguesa na América do Sul, marcado pelo cultivo do açúcar, latifúndio e exploração do trabalho escravizado."
+        "text": "CONTEXTO: Povos indígenas já habitavam o território há milhares de anos.\n\nACONTECIMENTO: Expedição de Pedro Álvares Cabral chega ao litoral.\n\nPOR QUÊ?\n→ Expansão marítima portuguesa\n→ Disputas territoriais\n→ Interesses comerciais\n\nCONSEQUÊNCIAS:\n→ Colonização portuguesa\n→ Exploração econômica\n→ Conflitos e alianças indígenas\n→ Escravização\n→ Transformações culturais."
       }
     },
     {
@@ -105,23 +217,71 @@
       "category": "Idade Moderna",
       "text": {
         "headline": "Reforma Protestante",
-        "text": "Martinho Lutero afixa as 95 Teses na Alemanha, questionando a Igreja Católica e dando origem ao Protestantismo, Calvinismo e Anglicanismo."
+        "text": "CONTEXTO: Críticas à Igreja Católica e transformações políticas e culturais.\n\nACONTECIMENTO: Martinho Lutero apresenta suas críticas.\n\nPOR QUÊ?\n→ Questões religiosas\n→ Críticas às indulgências\n→ Disputas políticas\n\nCONSEQUÊNCIAS:\n→ Protestantismo\n→ Guerras religiosas\n→ Reforma Católica\n→ Transformações políticas."
       }
     },
     {
-      "start_date": { "year": "1648" },
+      "start_date": { "year": "1534" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Capitanias Hereditárias",
+        "text": "CONTEXTO: Portugal buscava ocupar e defender o território.\n\nACONTECIMENTO: Divisão do território em grandes capitanias.\n\nPOR QUÊ?\n→ Reduzir custos administrativos\n→ Estimular ocupação\n→ Defender o território\n→ Explorar riquezas\n\nCONSEQUÊNCIAS:\n→ Ocupação desigual\n→ Desenvolvimento da produção açucareira\n→ Fortalecimento das elites locais."
+      }
+    },
+    {
+      "start_date": { "year": "1548" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Governo-Geral",
+        "text": "CONTEXTO: Problemas na administração das capitanias.\n\nACONTECIMENTO: Criação do Governo-Geral.\n\n1549:\n→ Tomé de Sousa chega ao Brasil.\n→ Salvador torna-se sede administrativa.\n\nPOR QUÊ?\n→ Centralizar a administração\n→ Melhorar a defesa\n→ Fortalecer a colonização\n\nCONSEQUÊNCIAS:\n→ Maior presença da Coroa\n→ Organização administrativa\n→ Expansão da colonização."
+      }
+    },
+    {
+      "start_date": { "year": "1600" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Açúcar (Séculos XVI–XVII)",
+        "text": "CONTEXTO: Portugal buscava tornar a colonização lucrativa.\n\nPOR QUÊ?\n→ Mercado europeu\n→ Demanda por açúcar\n→ Condições naturais\n→ Experiência portuguesa\n\nCONSEQUÊNCIAS:\n→ Latifúndio\n→ Monocultura\n→ Escravidão\n→ Exportação\n→ Sociedade desigual."
+      }
+    },
+    {
+      "start_date": { "year": "1601" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Escravização Africana (Séculos XVI–XIX)",
+        "text": "CONTEXTO: A economia colonial necessitava de grande quantidade de mão de obra compulsória.\n\nACONTECIMENTO: Milhões de africanos foram traficados para as Américas.\n\nPOR QUÊ?\n→ Interesses econômicos\n→ Produção colonial\n→ Comércio atlântico\n\nCONSEQUÊNCIAS:\n→ Violência\n→ Desestruturação de sociedades africanas\n→ Resistência\n→ Quilombos\n→ Formação da sociedade afro-brasileira."
+      }
+    },
+    {
+      "start_date": { "year": "1690" },
+      "category": "Idade Moderna",
+      "text": {
+        "headline": "Mineração (Final do Séc. XVII–Séc. XVIII)",
+        "text": "CONTEXTO: Expansão das expedições pelo interior.\n\nACONTECIMENTO: Descoberta e exploração de ouro.\n\nPOR QUÊ?\n→ Busca por metais preciosos\n→ Expansão territorial\n\nCONSEQUÊNCIAS:\n→ Crescimento urbano\n→ Interiorização\n→ Aumento da fiscalização portuguesa\n→ Mudanças econômicas."
+      }
+    },
+    {
+      "start_date": { "year": "1700" },
       "category": "Política",
       "text": {
-        "headline": "Paz de Westfália e o Estado Moderno",
-        "text": "Tratados que encerraram a Guerra dos Trinta Anos e estabeleceram o conceito moderno de soberania nacional e diplomacia entre Estados."
+        "headline": "Iluminismo (Séculos XVII–XVIII)",
+        "text": "CONTEXTO: Revolução Científica + crescimento comercial + críticas ao absolutismo.\n\nIDEIAS:\n→ Razão\n→ Liberdade\n→ Direitos\n→ Tolerância\n→ Limitação do poder\n\nPRINCIPAIS AUTORES: Locke, Montesquieu, Voltaire, Rousseau, Diderot.\n\nCONSEQUÊNCIAS:\n→ Crítica ao absolutismo\n→ Novas ideias políticas\n→ Influência sobre revoluções."
+      }
+    },
+    {
+      "start_date": { "year": "1760" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Primeira Revolução Industrial",
+        "text": "CONTEXTO: Inglaterra possuía capital, recursos minerais, mercados e transformações agrícolas.\n\nACONTECIMENTO: Expansão das máquinas e fábricas.\n\nPOR QUÊ?\n→ Aumentar produtividade\n→ Buscar lucro\n→ Atender mercados\n→ Inovações tecnológicas\n\nCONSEQUÊNCIAS:\n→ Urbanização\n→ Fábricas\n→ Classe operária\n→ Capitalismo industrial\n→ Novas relações de trabalho."
       }
     },
     {
       "start_date": { "year": "1776" },
       "category": "Política",
       "text": {
-        "headline": "Independência dos Estados Unidos",
-        "text": "As Treze Colônias rompem com a Grã-Bretanha fundamentadas em princípios iluministas de liberdade e direitos individuais."
+        "headline": "Independência dos EUA",
+        "text": "CONTEXTO: Conflitos entre Treze Colônias e Inglaterra.\n\nACONTECIMENTO: Declaração de Independência.\n\nPOR QUÊ?\n→ Impostos\n→ Falta de representação\n→ Autonomia política\n→ Influência iluminista\n\nCONSEQUÊNCIAS:\n→ Criação dos Estados Unidos\n→ Influência sobre outras revoluções."
       }
     },
     {
@@ -129,15 +289,23 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Revolução Francesa",
-        "text": "Queda da Bastilha e publicação da Declaração dos Direitos do Homem e do Cidadão, destruindo as bases do Absolutismo europeu."
+        "text": "CONTEXTO:\n→ Crise financeira\n→ Desigualdade social\n→ Privilégios\n→ Crise de abastecimento\n→ Iluminismo\n\n14/07/1789 — Queda da Bastilha.\n\nPOR QUÊ?\n→ Crise política e social\n→ Contestação do Antigo Regime\n\nCONSEQUÊNCIAS:\n→ Fim do Antigo Regime\n→ Direitos do Homem e do Cidadão\n→ República\n→ Radicalização política\n→ Ascensão de Napoleão."
       }
     },
     {
-      "start_date": { "year": "1800" },
+      "start_date": { "year": "1791" },
       "category": "Idade Contemporânea",
       "text": {
-        "headline": "Primeira Revolução Industrial",
-        "text": "Pioneirismo inglês com a máquina a vapor, carvão mineral e surgimento do proletariado urbano e das fábricas."
+        "headline": "Revolução Haitiana",
+        "text": "CONTEXTO: Colônia francesa baseada na escravidão.\n\nACONTECIMENTO: Revolta de escravizados transforma-se em revolução.\n\n1804 — Independência do Haiti.\n\nPOR QUÊ?\n→ Luta contra escravidão\n→ Luta contra dominação colonial\n\nCONSEQUÊNCIAS:\n→ Primeiro Estado independente da América Latina e Caribe formado por uma revolução de escravizados\n→ Abolição da escravidão no novo Estado."
+      }
+    },
+    {
+      "start_date": { "year": "1808" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Chegada da Corte Portuguesa ao Brasil",
+        "text": "CONTEXTO: Napoleão invadiu Portugal.\n\nACONTECIMENTO: Família real portuguesa transfere-se para o Brasil.\n\nPOR QUÊ?\n→ Preservar a monarquia portuguesa.\n\nCONSEQUÊNCIAS:\n→ Abertura dos portos\n→ Novas instituições\n→ Crescimento do Rio de Janeiro\n→ Maior autonomia do Brasil\n→ Caminho para a Independência."
       }
     },
     {
@@ -145,15 +313,39 @@
       "category": "Política",
       "text": {
         "headline": "Independência do Brasil",
-        "text": "Rompimento com Portugal e criação do Império do Brasil sob o governo de D. Pedro I, seguido pela Constituição de 1824."
+        "text": "CONTEXTO: Brasil havia adquirido grande importância após 1808.\n\n7/09/1822 — Independência.\n\nPOR QUÊ?\n→ Conflitos com as Cortes portuguesas\n→ Defesa da autonomia\n→ Interesses das elites brasileiras\n\nCONSEQUÊNCIAS:\n→ Império do Brasil\n→ Manutenção da monarquia\n→ Continuidade da escravidão\n→ Formação do Estado nacional."
+      }
+    },
+    {
+      "start_date": { "year": "1848" },
+      "category": "Política",
+      "text": {
+        "headline": "Manifesto Comunista",
+        "text": "CONTEXTO: Industrialização + desigualdade + crescimento da classe operária.\n\nACONTECIMENTO: Marx e Engels publicam o Manifesto Comunista.\n\nPOR QUÊ?\n→ Crítica ao capitalismo\n→ Organização política dos trabalhadores\n\nCONSEQUÊNCIAS:\n→ Expansão do pensamento socialista\n→ Influência sobre movimentos operários."
+      }
+    },
+    {
+      "start_date": { "year": "1884" },
+      "category": "Política",
+      "text": {
+        "headline": "Conferência de Berlim",
+        "text": "CONTEXTO: Potências europeias disputavam territórios africanos.\n\nACONTECIMENTO: Conferência estabelece regras para a ocupação colonial.\n\nPOR QUÊ?\n→ Competição imperialista\n→ Matérias-primas\n→ Mercados\n→ Poder geopolítico\n\nCONSEQUÊNCIAS:\n→ Intensificação da colonização africana\n→ Exploração\n→ Resistências africanas\n→ Fronteiras coloniais artificiais."
       }
     },
     {
       "start_date": { "year": "1888" },
       "category": "Idade Contemporânea",
       "text": {
-        "headline": "Abolição da Escravatura no Brasil",
-        "text": "Assinatura da Lei Áurea encerrando formalmente séculos de escravização africana no país, seguida pela Proclamação da República em 1889."
+        "headline": "Abolição da Escravidão no Brasil",
+        "text": "CONTEXTO:\n→ Resistência dos escravizados\n→ Movimento abolicionista\n→ Pressões políticas\n→ Mudanças econômicas\n\n13/05/1888 — Lei Áurea.\n\nCONSEQUÊNCIA:\n→ Fim legal da escravidão.\n\nCONTINUIDADE:\n→ Desigualdades sociais\n→ Racismo\n→ Falta de políticas amplas de integração dos libertos."
+      }
+    },
+    {
+      "start_date": { "year": "1889" },
+      "category": "Política",
+      "text": {
+        "headline": "Proclamação da República",
+        "text": "CONTEXTO:\n→ Crise da monarquia\n→ Questão militar\n→ Questão religiosa\n→ Abolição\n→ Republicanismo\n\n15/11/1889 — Proclamação da República.\n\nCONSEQUÊNCIA:\n→ Fim da monarquia\n→ Início da República."
       }
     },
     {
@@ -161,7 +353,7 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Primeira Guerra Mundial",
-        "text": "Conflito imperialista global motivado por rivalidades europeias, corrida armamentista e política de alianças militares."
+        "text": "CONTEXTO:\n→ Imperialismo\n→ Nacionalismo\n→ Militarismo\n→ Alianças\n\nMARCOS:\n28/06/1914 — Assassinato de Francisco Ferdinando.\n01/08/1914 — Alemanha declara guerra à Rússia.\n1917 — EUA entram na guerra.\n1918 — Armistício.\n1919 — Tratado de Versalhes.\n\nCONSEQUÊNCIAS:\n→ Milhões de mortos\n→ Fim de impérios\n→ Crise econômica\n→ Novos Estados\n→ Tensões que contribuíram para a Segunda Guerra."
       }
     },
     {
@@ -169,15 +361,55 @@
       "category": "Política",
       "text": {
         "headline": "Revolução Russa",
-        "text": "Derrubada do czarismo e tomada do poder pelos Bolcheviques sob liderança de Lênin, levando à criação da URSS em 1922."
+        "text": "CONTEXTO:\n→ Czarismo\n→ Desigualdade\n→ Guerra\n→ Crise econômica\n\nMARCOS:\nFevereiro/1917 — Queda do czar.\nOutubro/1917 — Bolcheviques tomam o poder.\n\nPOR QUÊ?\n→ Crise política e social\n→ Insatisfação popular\n→ Impacto da guerra\n\nCONSEQUÊNCIAS:\n→ Guerra Civil\n→ Criação da URSS em 1922\n→ Expansão do socialismo."
+      }
+    },
+    {
+      "start_date": { "year": "1922" },
+      "category": "Política",
+      "text": {
+        "headline": "Fascismo na Itália",
+        "text": "CONTEXTO: Crise econômica e política na Itália após a Primeira Guerra.\n\nACONTECIMENTO: Marcha sobre Roma.\n\nCONSEQUÊNCIAS:\n→ Mussolini no poder\n→ Ditadura\n→ Nacionalismo\n→ Repressão."
+      }
+    },
+    {
+      "start_date": { "year": "1929" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Grande Depressão",
+        "text": "CONTEXTO: Economia americana apresentava forte crescimento.\n\n24/10/1929 — Colapso da Bolsa de Nova York.\n\nPOR QUÊ?\n→ Especulação\n→ Crédito excessivo\n→ Desequilíbrios econômicos\n\nCONSEQUÊNCIAS:\n→ Falências\n→ Desemprego\n→ Queda da produção\n→ Crise mundial\n→ Instabilidade política."
       }
     },
     {
       "start_date": { "year": "1930" },
       "category": "Política",
       "text": {
-        "headline": "Era Vargas no Brasil",
-        "text": "Revolução de 1930 leva Getúlio Vargas ao poder, iniciando o processo de industrialização nacional, CLT e o Estado Novo."
+        "headline": "Revolução de 1930",
+        "text": "CONTEXTO:\n→ Crise da Primeira República\n→ Crise de 1929\n→ Conflitos entre oligarquias\n→ Movimento tenentista\n\nACONTECIMENTO: Vargas chega ao poder.\n\nPOR QUÊ?\n→ Contestação da estrutura política existente.\n\nCONSEQUÊNCIAS:\n→ Fim da Primeira República\n→ Centralização política\n→ Início da Era Vargas."
+      }
+    },
+    {
+      "start_date": { "year": "1930" },
+      "category": "Política",
+      "text": {
+        "headline": "Era Vargas (1930–1945)",
+        "text": "MARCOS:\n1930–1934 — Governo Provisório.\n1934–1937 — Governo Constitucional.\n1937–1945 — Estado Novo.\n1937 — Golpe do Estado Novo.\n1943 — CLT.\n\nCONSEQUÊNCIAS:\n→ Centralização\n→ Legislação trabalhista\n→ Industrialização\n→ Nacionalismo\n→ Propaganda\n→ Repressão política durante o Estado Novo."
+      }
+    },
+    {
+      "start_date": { "year": "1933" },
+      "category": "Política",
+      "text": {
+        "headline": "Nazismo na Alemanha",
+        "text": "CONTEXTO:\n→ Crise econômica\n→ Desemprego\n→ Instabilidade política\n→ Insatisfação com a República de Weimar\n\nACONTECIMENTO: Hitler torna-se chanceler.\n\nCONSEQUÊNCIAS:\n→ Ditadura\n→ Antissemitismo\n→ Perseguição\n→ Militarização\n→ Segunda Guerra Mundial."
+      }
+    },
+    {
+      "start_date": { "year": "1933" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Holocausto (1933–1945)",
+        "text": "CONTEXTO: Ideologia racial nazista.\n\nACONTECIMENTO: Perseguição e assassinato sistemático de judeus e outros grupos.\n\nPOR QUÊ?\n→ Antissemitismo\n→ Racismo nazista\n→ Política de extermínio\n\nCONSEQUÊNCIA:\n→ Aproximadamente seis milhões de judeus assassinados\n→ Impactos profundos na memória e no direito internacional."
       }
     },
     {
@@ -185,15 +417,39 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Segunda Guerra Mundial",
-        "text": "Confronto entre Aliados e o Eixo Totalitário. Termina em 1945 com a derrota do Nazifascismo, o Holocausto e a criação da ONU."
+        "text": "CONTEXTO:\n→ Crise do período entre guerras\n→ Expansionismo nazista\n→ Militarismo\n→ Nacionalismos\n\nMARCOS:\n01/09/1939 — Alemanha invade a Polônia.\n1941 — Alemanha invade a URSS / Japão ataca Pearl Harbor.\n1944 — Dia D.\n1945 — Queda de Berlim / Hiroshima / Nagasaki / Rendição japonesa.\n\nCONSEQUÊNCIAS:\n→ Milhões de mortos\n→ Holocausto\n→ Destruição econômica\n→ ONU\n→ Ascensão de EUA e URSS\n→ Guerra Fria."
+      }
+    },
+    {
+      "start_date": { "year": "1946" },
+      "category": "Política",
+      "text": {
+        "headline": "Democracia no Brasil (1946–1964)",
+        "text": "MARCOS:\n1946 — Constituição.\n1951–1954 — Segundo governo Vargas.\n1954 — Morte de Vargas.\n1956–1961 — Governo JK.\n1960 — Brasília.\n1961 — Renúncia de Jânio Quadros.\n1961–1964 — Governo João Goulart.\n\nCONSEQUÊNCIAS:\n→ Industrialização\n→ Urbanização\n→ Conflitos políticos\n→ Crescimento das demandas sociais\n→ Polarização."
       }
     },
     {
       "start_date": { "year": "1947" },
       "category": "Política",
       "text": {
-        "headline": "Início da Guerra Fria",
-        "text": "Bipolarização geopolítica mundial entre EUA (Capitalismo) e URSS (Socialismo), marcada por corridas armamentista e espacial."
+        "headline": "Guerra Fria (1947–1991)",
+        "text": "CONTEXTO: EUA e URSS emergem como superpotências.\n\nACONTECIMENTO: Disputa entre dois grandes blocos.\n\nPOR QUÊ?\n→ Conflitos ideológicos\n→ Disputas geopolíticas\n→ Poder internacional\n\nPRINCIPAIS EVENTOS:\n1949 → OTAN | Revolução Chinesa\n1950–1953 → Guerra da Coreia\n1955 → Pacto de Varsóvia\n1957 → Sputnik\n1959 → Revolução Cubana\n1961 → Muro de Berlim\n1962 → Crise dos Mísseis\n1969 → Homem na Lua\n1989 → Queda do Muro\n1991 → Fim da URSS\n\nCONSEQUÊNCIAS:\n→ Corrida armamentista e espacial\n→ Guerras indiretas\n→ Alianças militares e disputas ideológicas."
+      }
+    },
+    {
+      "start_date": { "year": "1945" },
+      "category": "Política",
+      "text": {
+        "headline": "Descolonização (1945–1970s)",
+        "text": "CONTEXTO:\n→ Enfraquecimento das potências europeias\n→ Nacionalismos\n→ Movimentos anticoloniais\n\nMARCOS:\n1947 — Independência da Índia.\n1957 — Independência de Gana.\n1960 — Grande onda de independências africanas.\n1962 — Independência da Argélia.\n1975 — Independência de Angola e Moçambique.\n\nCONSEQUÊNCIAS:\n→ Novos Estados\n→ Conflitos internos\n→ Disputas territoriais\n→ Dependência econômica em diversos contextos."
+      }
+    },
+    {
+      "start_date": { "year": "1950" },
+      "category": "Política",
+      "text": {
+        "headline": "Movimentos Sociais (1950s–1970s)",
+        "text": "PAUTAS:\n→ Direitos civis\n→ Feminismos\n→ Movimento estudantil\n→ Movimentos anticoloniais\n→ Movimento operário\n→ Ambientalismo\n\nCONSEQUÊNCIAS:\n→ Ampliação de direitos\n→ Mudanças culturais\n→ Questionamento das desigualdades."
       }
     },
     {
@@ -201,15 +457,15 @@
       "category": "Política",
       "text": {
         "headline": "Ditadura Militar no Brasil",
-        "text": "Golpe civil-militar depõe João Goulart. Período marcado por repressão, AI-5, censura e posterior abertura política até 1985."
+        "text": "CONTEXTO:\n→ Polarização política\n→ Crise econômica\n→ Guerra Fria\n→ Conflitos sociais\n→ Disputas sobre reformas\n\nACONTECIMENTO: Golpe de Estado depõe João Goulart.\n\nPRESIDENTES:\n1964–1967 → Castelo Branco\n1967–1969 → Costa e Silva\n1969–1974 → Médici\n1974–1979 → Geisel\n1979–1985 → Figueiredo\n\n1968 — AI-5.\n\nCONSEQUÊNCIAS:\n→ Censura\n→ Repressão\n→ Prisões\n→ Tortura\n→ Exílio\n→ Resistência\n→ Transformações econômicas."
       }
     },
     {
-      "start_date": { "year": "1988" },
+      "start_date": { "year": "1985" },
       "category": "Política",
       "text": {
-        "headline": "Constituição Cidadã do Brasil",
-        "text": "Promulgação da nova carta constitucional brasileira, restabelecendo a democracia e garantindo direitos civis e sociais."
+        "headline": "Redemocratização do Brasil",
+        "text": "CONTEXTO:\n→ Crise da ditadura\n→ Mobilização social\n→ Movimento pela democracia\n\nACONTECIMENTO: Fim do regime militar.\n\n1988 — Constituição Federal.\n\nCONSEQUÊNCIAS:\n→ Ampliação de direitos\n→ Instituições democráticas\n→ Nova organização política."
       }
     },
     {
@@ -217,7 +473,39 @@
       "category": "Idade Contemporânea",
       "text": {
         "headline": "Queda do Muro de Berlim",
-        "text": "Símbolo do colapso do bloco socialista no Leste Europeu e prelúdio do fim da União Soviética em 1991."
+        "text": "CONTEXTO: Crise dos regimes socialistas do Leste Europeu.\n\nACONTECIMENTO: Queda do Muro em 9 de novembro.\n\nPOR QUÊ?\n→ Pressões populares\n→ Reformas políticas\n→ Crise do bloco socialista\n\nCONSEQUÊNCIAS:\n→ Reunificação alemã\n→ Enfraquecimento do bloco socialista\n→ Fim simbólico da Guerra Fria."
+      }
+    },
+    {
+      "start_date": { "year": "1989" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Internet (1989–1990s)",
+        "text": "1989 — Proposta da World Wide Web.\n1990s — Expansão da Internet comercial.\n\nCONSEQUÊNCIAS:\n→ Comunicação global\n→ Economia digital\n→ Novas profissões\n→ Transformação da educação\n→ Globalização da informação."
+      }
+    },
+    {
+      "start_date": { "year": "1991" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Fim da URSS",
+        "text": "CONTEXTO:\n→ Crise econômica\n→ Reformas de Gorbachev\n→ Nacionalismos\n→ Crise política\n\nACONTECIMENTO: Dissolução da União Soviética.\n\nCONSEQUÊNCIAS:\n→ Fim da Guerra Fria\n→ Novos Estados independentes\n→ Nova configuração internacional."
+      }
+    },
+    {
+      "start_date": { "year": "2001" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Ataques Terroristas nos EUA (11/09)",
+        "text": "ACONTECIMENTO: Ataques coordenados atingiram os Estados Unidos.\n\nCONSEQUÊNCIAS:\n→ Guerra do Afeganistão\n→ Mudanças nas políticas de segurança\n→ Guerra do Iraque em 2003\n→ Transformações geopolíticas."
+      }
+    },
+    {
+      "start_date": { "year": "2015" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Acordo de Paris",
+        "text": "CONTEXTO: Crescimento das preocupações com as mudanças climáticas.\n\nACONTECIMENTO: Acordo internacional sobre mudanças climáticas.\n\nCONSEQUÊNCIAS:\n→ Metas nacionais de redução de emissões\n→ Debates sobre energia\n→ Fortalecimento da agenda ambiental."
       }
     },
     {
@@ -225,23 +513,15 @@
       "category": "Atualidades",
       "text": {
         "headline": "Pandemia de COVID-19",
-        "text": "Crise sanitária global que acelerou o trabalho remoto, a digitalização do ensino e redefiniu políticas públicas em escala mundial."
+        "text": "CONTEXTO: Novo coronavírus espalha-se internacionalmente.\n\nACONTECIMENTO: Pandemia global.\n\nCONSEQUÊNCIAS:\n→ Milhões de mortes\n→ Isolamento\n→ Ensino remoto\n→ Crise econômica\n→ Mudanças no trabalho\n→ Aceleração da digitalização\n→ Vacinas."
       }
     },
     {
       "start_date": { "year": "2022" },
       "category": "Atualidades",
       "text": {
-        "headline": "Reconfiguração Geopolítica Mundial",
-        "text": "Conflitos no Leste Europeu e tensões globais impactam o comércio, cadeias de mantimentos e a transição energética."
-      }
-    },
-    {
-      "start_date": { "year": "2024" },
-      "category": "Atualidades",
-      "text": {
-        "headline": "Revolução da Inteligência Artificial e Plataformização",
-        "text": "Consolidação dos modelos de IA generativa, debates de regulamentação ética, Uberização do trabalho e novos ecossistemas digitais."
+        "headline": "Expansão da IA Generativa (2022–2026)",
+        "text": "CONTEXTO: Décadas de desenvolvimento da computação e do aprendizado de máquina.\n\nACONTECIMENTO: IA generativa passa a ser utilizada em larga escala.\n\nPOR QUÊ?\n→ Maior capacidade computacional\n→ Grandes bases de dados\n→ Evolução dos modelos de IA\n\nCONSEQUÊNCIAS:\n→ Automação\n→ Novas profissões\n→ Mudanças no trabalho\n→ Transformações na educação\n→ Debate sobre autoria, privacidade, ética e desinformação."
       }
     }
   ]
