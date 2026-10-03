@@ -1,7 +1,7 @@
 {
   "title": {
-    "headline": "Linha do Tempo Detalhada da História Geral",
-    "text": "Uma compilação aprofundada dos grandes marcos, processos socioeconômicos e viradas geopolíticas da humanidade."
+    "headline": "Linha do Tempo da História Geral",
+    "text": "Cronologia abrangente da Antiguidade à Era Contemporânea, com destaque para transformações políticas e atualidades."
   },
   "events": [
     {
@@ -9,7 +9,39 @@
       "category": "Antiguidade",
       "text": {
         "headline": "Invenção da Escrita Cuneiforme",
-        "text": "Desenvolvida pelos sumérios na Mesopotâmia para o controle contábil e administrativo."
+        "text": "Desenvolvida pelos sumérios na Mesopotâmia, marcando a transição da Pré-História para a Antiguidade."
+      }
+    },
+    {
+      "start_date": { "year": "-508" },
+      "category": "Política",
+      "text": {
+        "headline": "Nascimento da Democracia Ateniense",
+        "text": "Reformas de Clístenes em Atenas estabelecem as bases da participação política direta dos cidadãos."
+      }
+    },
+    {
+      "start_date": { "year": "-27" },
+      "category": "Antiguidade",
+      "text": {
+        "headline": "Início do Império Romano",
+        "text": "Caio Otávio recebe o título de Augusto, consolidando a transição da República Romana para o Império."
+      }
+    },
+    {
+      "start_date": { "year": "476" },
+      "category": "Idade Média",
+      "text": {
+        "headline": "Queda do Império Romano do Ocidente",
+        "text": "A deposição do imperador Rômulo Augusto marca formalmente o início da Idade Média na Europa."
+      }
+    },
+    {
+      "start_date": { "year": "1215" },
+      "category": "Política",
+      "text": {
+        "headline": "Outorga da Magna Carta",
+        "text": "Documento inglês que limitou os poderes do rei João Sem-Terra, criando precedentes para o constitucionalismo."
       }
     },
     {
@@ -17,15 +49,63 @@
       "category": "Idade Moderna",
       "text": {
         "headline": "Queda de Constantinopla",
-        "text": "Tomada da capital bizantina pelos otomanos, marcando o fim da Idade Média e início das Grandes Navegações."
+        "text": "Tomada da capital bizantina pelos turcos otomanos, sinalizando o fim da Idade Média e expansão das rotas marítimas."
       }
     },
     {
       "start_date": { "year": "1789" },
-      "category": "Idade Contemporânea",
+      "category": "Política",
       "text": {
         "headline": "Revolução Francesa",
-        "text": "A Queda da Bastilha marcou o fim do absolutismo francês e a difusão dos direitos humanos."
+        "text": "Processo político e social que derrubou o absolutismo, difundindo os ideais burgueses de Liberdade, Igualdade e Fraternidade."
+      }
+    },
+    {
+      "start_date": { "year": "1914" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Primeira Guerra Mundial",
+        "text": "Conflito global impulsionado pelo imperialismo e nacionalismo, alterando radicalmente o mapa político europeu."
+      }
+    },
+    {
+      "start_date": { "year": "1945" },
+      "category": "Política",
+      "text": {
+        "headline": "Criação da Organização das Nações Unidas (ONU)",
+        "text": "Fundada no pós-Segunda Guerra para promover a cooperação internacional e evitar novos conflitos globais."
+      }
+    },
+    {
+      "start_date": { "year": "1989" },
+      "category": "Idade Contemporânea",
+      "text": {
+        "headline": "Queda do Muro de Berlim",
+        "text": "Símbolo do fim da Guerra Fria e da reunificação alemã, reconfigurando a geopolítica mundial."
+      }
+    },
+    {
+      "start_date": { "year": "2020" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Pandemia Global de COVID-19",
+        "text": "Crise sanitária mundial que acelerou a transformação digital, o trabalho remoto e redefiniu políticas públicas regionais."
+      }
+    },
+    {
+      "start_date": { "year": "2022" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Conflito Geopolítico Leste Europeu",
+        "text": "Eclosão de disputas territoriais e sanções internacionais que impactaram a segurança energética e a economia global."
+      }
+    },
+    {
+      "start_date": { "year": "2024" },
+      "category": "Atualidades",
+      "text": {
+        "headline": "Avanço e Regulamentação da Inteligência Artificial",
+        "text": "Debates globais e primeiras legislações estruturadas sobre o impacto da IA na sociedade, trabalho e ética."
       }
     }
   ]
