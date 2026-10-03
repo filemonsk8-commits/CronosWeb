@@ -57,7 +57,7 @@
     .controls {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
       align-items: center;
       max-width: 1000px;
@@ -71,7 +71,7 @@
       border-radius: 20px;
       color: #fff;
       font-size: 0.9rem;
-      width: 280px;
+      width: 260px;
       outline: none;
       transition: all 0.2s ease;
     }
@@ -212,9 +212,10 @@
       <button class="btn-filter active" onclick="filtrarCategoria('todas', this)">Todas</button>
       <button class="btn-filter" onclick="filtrarCategoria('Antiguidade', this)">Antiguidade</button>
       <button class="btn-filter" onclick="filtrarCategoria('Idade Média', this)">Idade Média</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Idade Moderna', this)">Moderna</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Idade Moderna', this)">Idade Moderna</button>
       <button class="btn-filter" onclick="filtrarCategoria('Idade Contemporânea', this)">Contemporânea</button>
-      <button class="btn-filter" onclick="filtrarCategoria('Era Digital', this)">Digital</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Política', this)">Política</button>
+      <button class="btn-filter" onclick="filtrarCategoria('Atualidades', this)">Atualidades</button>
     </div>
   </header>
 
@@ -227,7 +228,7 @@
     fetch('timeline.json')
       .then(res => res.json())
       .then(data => {
-        // Extração segura do Título e Descrição
+        // Leitura flexível do título para evitar erros [object Object] ou undefined
         if (typeof data.title === 'object' && data.title !== null) {
           document.getElementById('main-title').innerText = data.title.headline || "Linha do Tempo";
           document.getElementById('main-desc').innerText = data.title.text || "História Geral";
@@ -236,13 +237,13 @@
           document.getElementById('main-desc').innerText = "Linha do Tempo Histórica";
         }
 
-        // Extração segura dos eventos (suporta 'events' ou 'eventos')
+        // Aceita a chave 'events' ou 'eventos' no JSON
         bancoDados = data.events || data.eventos || [];
         renderizar(bancoDados);
       })
       .catch(err => {
-        console.error(err);
-        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o ficheiro timeline.json. Verifique o formato no GitHub.</p>`;
+        console.error("Erro ao carregar o JSON:", err);
+        document.getElementById('timeline').innerHTML = `<p style="text-align:center; color:#ef4444; width:100%;">Erro ao carregar o arquivo timeline.json. Verifique o formato no repositório.</p>`;
       });
 
     function formatarAno(ano) {
